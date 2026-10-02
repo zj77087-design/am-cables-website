@@ -2,8 +2,17 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>A.M. Cables</title>
+   
+   <title>A.M. Cables | Quality Cable Manufacturer in Lahore</title>
+<meta name="description" content="A.M. Cables - Quality cable manufacturing in Lahore, Pakistan. Explore our range of electrical and WAPDA cables and request a quote.">
+
+<meta name="keywords" content="A.M. Cables, cable manufacturer Lahore, electrical cables Pakistan, WAPDA cable, copper cable">
+
+<meta name="author" content="A.M. Cables">
+
+<meta name="robots" content="index, follow">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 <style>
     * {
         margin: 0;
@@ -16,738 +25,1864 @@
         background: #f5f7fa;
     }
 
+   /* PROFESSIONAL HEADER & NAVBAR */
+
+header {
+    background:#0b1f3a;
+    color:white;
+    padding:18px 50px;
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    position:sticky;
+    top:0;
+    z-index:1000;
+    box-shadow:0 4px 18px rgba(0,0,0,.12);
+}
+
+.logo {
+    font-size:28px;
+    font-weight:bold;
+    color:#f5c542;
+    letter-spacing:.5px;
+}
+
+nav {
+    display:flex;
+    align-items:center;
+    gap:28px;
+}
+
+nav a {
+    position:relative;
+    color:#fff;
+    text-decoration:none;
+    font-size:15px;
+    font-weight:600;
+    padding:8px 0;
+    transition:.3s ease;
+}
+
+nav a::after {
+    content:"";
+    position:absolute;
+    left:0;
+    bottom:0;
+    width:0;
+    height:2px;
+    background:#f5c542;
+    transition:.3s ease;
+}
+
+nav a:hover {
+    color:#f5c542;
+}
+
+nav a:hover::after {
+    width:100%;
+}
+
+@media (max-width:700px) {
     header {
-        background: #0b1f3a;
-        color: white;
-        padding: 18px 50px;
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
+        padding:16px 20px;
+        flex-direction:column;
+        gap:15px;
     }
 
     .logo {
-        font-size: 28px;
-        font-weight: bold;
-        color: #f5c542;
+        font-size:24px;
     }
 
     nav {
-        display: flex;
-        gap: 25px;
+        gap:18px;
+        flex-wrap:wrap;
+        justify-content:center;
     }
 
     nav a {
-        color: white;
-        text-decoration: none;
-        font-size: 16px;
-        font-weight: bold;
+        font-size:14px;
     }
+}
 
-    nav a:hover {
-        color: #f5c542;
-    }
+/* =================================
+   PREMIUM A.M. CABLES HERO
+================================= */
 
 #home {
-    min-height: 450px;
+    min-height: 600px;
+    padding: 70px 50px;
+    background:
+        linear-gradient(135deg, #0b1f3a 0%, #102b4f 55%, #07172b 100%);
     display: flex;
     align-items: center;
-    justify-content: center;
-    text-align: center;
-    padding: 50px 20px;
-    background: #eaf0f7;
+    position: relative;
+    overflow: hidden;
 }
 
-.hero-text h1 {
-    font-size: 48px;
-    color: #0b1f3a;
+#home::before {
+    content: "";
+    position: absolute;
+    width: 450px;
+    height: 450px;
+    border: 1px solid rgba(245, 197, 66, 0.15);
+    border-radius: 50%;
+    right: -150px;
+    top: -100px;
+}
+
+#home::after {
+    content: "";
+    position: absolute;
+    width: 300px;
+    height: 300px;
+    border: 1px solid rgba(255, 255, 255, 0.08);
+    border-radius: 50%;
+    left: -140px;
+    bottom: -150px;
+}
+
+.hero-content {
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: 1.15fr 0.85fr;
+    gap: 70px;
+    align-items: center;
+    position: relative;
+    z-index: 2;
+}
+
+.hero-left {
+    max-width: 650px;
+}
+
+.hero-tag {
+    display: inline-block;
+    color: #f5c542;
+    font-size: 13px;
+    font-weight: bold;
+    letter-spacing: 3px;
+    margin-bottom: 18px;
+}
+
+.hero-left h1 {
+    color: #ffffff;
+    font-size: 58px;
+    line-height: 1.05;
     margin-bottom: 15px;
 }
 
-.hero-text h2 {
-    font-size: 28px;
-    color: #333;
-    margin-bottom: 15px;
+.hero-left h2 {
+    color: #f5c542;
+    font-size: 32px;
+    line-height: 1.25;
+    margin-bottom: 90px;
 }
 
-.hero-text p {
-    font-size: 18px;
-    color: #555;
-    margin-bottom: 25px;
+.hero-left p {
+    max-width: 600px;
+    color: #dbe3ed;
+    font-size: 17px;
+    line-height: 1.8;
+    margin-bottom: 30px;
+}
+
+.hero-buttons {
+    display: flex;
+    gap: 14px;
+    flex-wrap: wrap;
 }
 
 .hero-btn {
     display: inline-block;
+    padding: 14px 27px;
     background: #f5c542;
     color: #0b1f3a;
-    padding: 13px 28px;
     text-decoration: none;
+    font-size: 14px;
     font-weight: bold;
-    border-radius: 6px;
+    border-radius: 7px;
+    transition: 0.3s ease;
 }
 
 .hero-btn:hover {
-    background: #0b1f3a;
-    color: white;
-}
-#products {
-    padding: 60px 20px;
-    text-align: center;
-    background: white;
+    transform: translateY(-3px);
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.25);
 }
 
-#products h2 {
-    font-size: 36px;
+.hero-btn-outline {
+    background: transparent;
+    color: #ffffff;
+    border: 1px solid rgba(255, 255, 255, 0.35);
+}
+
+.hero-btn-outline:hover {
+    background: #ffffff;
     color: #0b1f3a;
-    margin-bottom: 40px;
 }
 
-.product-container {
+.hero-right {
     display: flex;
-    flex-wrap: wrap;
     justify-content: center;
-    gap: 25px;
 }
 
-.product-card {
-    width: 260px;
-    min-height: 180px;
-    padding: 25px 20px;
-    background: #f5f7fa;
-    border-radius: 10px;
-    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.12);
-    transition: 0.3s;
-}
-
-.product-card h3 {
-    color: #0b1f3a;
-    font-size: 21px;
-    margin-bottom: 15px;
-}
-
-.product-card p {
-    color: #555;
-    font-size: 15px;
-    line-height: 1.6;
-}
-
-.product-card:hover {
-    transform: translateY(-8px);
-}
-.product-card img {
+.hero-card {
     width: 100%;
-    height: 130px;
-    object-fit: cover;
-    border-radius: 8px;
-    margin-bottom: 18px;
-}
-#about {
-    padding: 60px 20px;
-    text-align: center;
-    background: #eaf0f7;
+    max-width: 390px;
+    padding: 38px 32px;
+    background: rgba(255, 255, 255, 0.07);
+    border: 1px solid rgba(245, 197, 66, 0.35);
+    border-radius: 18px;
+    box-shadow: 0 25px 60px rgba(0, 0, 0, 0.25);
+    backdrop-filter: blur(8px);
 }
 
-#about h2 {
-    font-size: 36px;
-    color: #0b1f3a;
-    margin-bottom: 25px;
-}
-
-#about p {
-    max-width: 800px;
-    margin: 0 auto 15px;
-    color: #555;
-    font-size: 17px;
-    line-height: 1.7;
-}
-#why-us {
-    padding: 60px 20px;
-    text-align: center;
-    background: white;
-}
-
-#why-us h2 {
-    font-size: 36px;
-    color: #0b1f3a;
-    margin-bottom: 40px;
-}
-
-.why-container {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    gap: 25px;
-}
-
-.why-card {
-    width: 240px;
-    min-height: 220px;
-    padding: 30px 20px;
-    background: #f5f7fa;
-    border-radius: 10px;
-    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.12);
-    transition: 0.3s;
-}
-
-.why-card:hover {
-    transform: translateY(-8px);
-}
-
-.why-icon {
-    font-size: 40px;
-    margin-bottom: 15px;
-}
-
-.why-card h3 {
-    color: #0b1f3a;
-    font-size: 21px;
-    margin-bottom: 12px;
-}
-
-.why-card p {
-    color: #555;
-    font-size: 15px;
-    line-height: 1.6;
-}
-#process {
-    padding: 60px 20px;
-    text-align: center;
-    background: #eaf0f7;
-}
-
-#process h2 {
-    font-size: 36px;
-    color: #0b1f3a;
-    margin-bottom: 15px;
-}
-
-.process-intro {
-    max-width: 750px;
-    margin: 0 auto 40px;
-    color: #555;
-    font-size: 17px;
-    line-height: 1.7;
-}
-
-.process-container {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    gap: 25px;
-}
-
-.process-card {
-    width: 240px;
-    min-height: 220px;
-    padding: 30px 20px;
-    background: white;
-    border-radius: 10px;
-    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.12);
-    transition: 0.3s;
-}
-
-.process-card:hover {
-    transform: translateY(-8px);
-}
-
-.process-number {
-    width: 55px;
-    height: 55px;
-    margin: 0 auto 18px;
+.hero-card-icon {
+    width: 65px;
+    height: 65px;
     display: flex;
     align-items: center;
     justify-content: center;
     background: #f5c542;
     color: #0b1f3a;
-    border-radius: 50%;
-    font-size: 18px;
-    font-weight: bold;
+    border-radius: 14px;
+    font-size: 30px;
+    margin-bottom: 22px;
 }
 
-.process-card h3 {
-    color: #0b1f3a;
-    font-size: 20px;
+.hero-card h3 {
+    color: #ffffff;
+    font-size: 23px;
+    line-height: 1.35;
     margin-bottom: 12px;
 }
 
-.process-card p {
-    color: #555;
-    font-size: 15px;
-    line-height: 1.6;
-}
-.quote-btn {
-    display: inline-block;
-    margin-top: 18px;
-    padding: 10px 18px;
-    background: #f5c542;
-    color: #0b1f3a;
-    text-decoration: none;
-    font-weight: bold;
-    border-radius: 6px;
-    transition: 0.3s;
+.hero-card p {
+    color: #bfcbd9;
+    font-size: 14px;
+    line-height: 1.7;
+    margin-bottom: 25px;
 }
 
-.quote-btn:hover {
-    background: #0b1f3a;
-    color: white;
+.hero-line {
+    height: 1px;
+    background: rgba(255, 255, 255, 0.12);
+    margin-bottom: 22px;
 }
 
-.product-card small {
+.hero-mini-info {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 15px;
+}
+
+.hero-mini-info div {
+    padding: 14px;
+    background: rgba(255, 255, 255, 0.05);
+    border-radius: 8px;
+}
+
+.hero-mini-info strong {
     display: block;
-    margin-top: 8px;
-    color: #777;
-    font-size: 12px;
-    line-height: 1.4;
+    color: #f5c542;
+    font-size: 14px;
+    margin-bottom: 5px;
 }
-#contact {
-    padding: 60px 20px;
-    background: white;
+
+.hero-mini-info span {
+    color: #dbe3ed;
+    font-size: 12px;
+}
+
+/* HERO TABLET */
+
+@media (max-width: 900px) {
+
+    #home {
+        padding: 65px 25px;
+    }
+
+    .hero-content {
+        grid-template-columns: 1fr;
+        gap: 45px;
+        text-align: center;
+    }
+
+    .hero-left {
+        max-width: 700px;
+        margin: 0 auto;
+    }
+
+    .hero-left p {
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    .hero-buttons {
+        justify-content: center;
+    }
+
+    .hero-right {
+        width: 100%;
+    }
+}
+
+/* HERO MOBILE */
+
+@media (max-width: 600px) {
+
+    #home {
+        min-height: auto;
+        padding: 60px 18px;
+    }
+
+    .hero-left h1 {
+        font-size: 42px;
+    }
+
+    .hero-left h2 {
+        font-size: 25px;
+    }
+
+    .hero-left p {
+        font-size: 15px;
+    }
+
+    .hero-buttons {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .hero-btn {
+        width: 100%;
+        max-width: 280px;
+        text-align: center;
+    }
+
+    .hero-card {
+        padding: 28px 22px;
+    }
+
+    .hero-card h3 {
+        font-size: 20px;
+    }
+}
+
+
+
+/* =================================
+   PREMIUM PRODUCTS SECTION
+================================= */
+
+#products {
+    padding: 95px 20px;
+    background: #f5f7fa;
+}
+
+.products-header {
+    max-width: 760px;
+    margin: 0 auto 55px;
     text-align: center;
 }
 
-#contact h2 {
-    font-size: 36px;
+.products-header > span {
+    display: inline-block;
+    color: #d5a900;
+    font-size: 13px;
+    font-weight: 700;
+    letter-spacing: 2px;
+    margin-bottom: 12px;
+}
+
+.products-header h2 {
+    color: #0b1f3a;
+    font-size: 40px;
+    line-height: 1.2;
+    margin-bottom: 18px;
+}
+
+.products-header h2::after {
+    content: "";
+    display: block;
+    width: 60px;
+    height: 4px;
+    background: #f5c542;
+    margin: 15px auto 0;
+    border-radius: 5px;
+}
+
+.products-header p {
+    max-width: 680px;
+    margin: 0 auto;
+    color: #687386;
+    font-size: 16px;
+    line-height: 1.7;
+}
+
+.product-container {
+    max-width: 1150px;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 25px;
+}
+
+.product-card {
+    background: #ffffff;
+    border: 1px solid #e1e5ea;
+    border-radius: 15px;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    box-shadow: 0 8px 25px rgba(11, 31, 58, 0.07);
+    transition: 0.3s ease;
+}
+
+.product-card:hover {
+    transform: translateY(-8px);
+    border-color: #f5c542;
+    box-shadow: 0 18px 40px rgba(11, 31, 58, 0.14);
+}
+
+.product-image {
+    height: 220px;
+    background: #f8fafc;
+    position: relative;
+    padding: 15px;
+    overflow: hidden;
+}
+
+.product-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+    display: block;
+    transition: 0.4s ease;
+}
+
+.product-card:hover .product-image img {
+    transform: scale(1.04);
+}
+
+.product-badge {
+    position: absolute;
+    top: 14px;
+    left: 14px;
+    background: #0b1f3a;
+    color: #f5c542;
+    padding: 6px 10px;
+    border-radius: 5px;
+    font-size: 10px;
+    font-weight: bold;
+    letter-spacing: 1px;
+}
+
+.product-content {
+    padding: 25px 22px 22px;
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+}
+
+.product-content h3 {
+    color: #0b1f3a;
+    font-size: 20px;
+    line-height: 1.35;
+    margin-bottom: 10px;
+}
+
+.product-content p {
+    color: #687386;
+    font-size: 14px;
+    line-height: 1.7;
+    margin-bottom: 22px;
+}
+
+.product-content .quote-btn {
+    margin-top: auto;
+    display: block;
+    width: 100%;
+    padding: 13px 15px;
+    background: #0b1f3a;
+    color: #ffffff;
+    text-decoration: none;
+    text-align: center;
+    border-radius: 7px;
+    font-size: 14px;
+    font-weight: 600;
+    transition: 0.3s ease;
+}
+
+.product-content .quote-btn:hover {
+    background: #f5c542;
+    color: #0b1f3a;
+    transform: translateY(-2px);
+}
+
+@media (max-width: 900px) {
+    #products {
+        padding: 75px 20px;
+    }
+
+    .product-container {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .products-header h2 {
+        font-size: 34px;
+    }
+}
+
+@media (max-width: 600px) {
+    #products {
+        padding: 65px 15px;
+    }
+
+    .products-header {
+        margin-bottom: 35px;
+    }
+
+    .products-header h2 {
+        font-size: 30px;
+    }
+
+    .products-header p {
+        font-size: 14px;
+    }
+
+    .product-container {
+        grid-template-columns: 1fr;
+        gap: 20px;
+    }
+
+    .product-image {
+        height: 200px;
+    }
+
+    .product-content {
+        padding: 22px 18px 18px;
+    }
+}
+
+
+
+/* =================================
+   PREMIUM ABOUT / COMPANY SECTION
+================================= */
+
+#about {
+    padding: 90px 20px;
+    background: #ffffff;
+}
+
+.about-header {
+    max-width: 850px;
+    margin: 0 auto 55px;
+    text-align: center;
+}
+
+.about-header > span {
+    display: inline-block;
+    color: #f0b900;
+    font-size: 13px;
+    font-weight: 700;
+    letter-spacing: 2px;
+    margin-bottom: 12px;
+}
+
+.about-header h2 {
+    font-size: 38px;
     color: #0b1f3a;
     margin-bottom: 15px;
 }
 
+.about-header h2::after {
+    content: "";
+    display: block;
+    width: 60px;
+    height: 4px;
+    background: #f5c542;
+    margin: 14px auto 0;
+    border-radius: 5px;
+}
+
+.about-header p {
+    max-width: 700px;
+    margin: 20px auto 0;
+    color: #687386;
+    font-size: 16px;
+    line-height: 1.7;
+}
+
+.about-content {
+    max-width: 1150px;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 50px;
+    align-items: center;
+}
+
+.about-main {
+    padding: 35px;
+    background: #0b1f3a;
+    border-radius: 16px;
+    position: relative;
+    overflow: hidden;
+}
+
+.about-main::before {
+    content: "";
+    position: absolute;
+    width: 5px;
+    height: 100%;
+    left: 0;
+    top: 0;
+    background: #f5c542;
+}
+
+.about-main h3 {
+    color: #ffffff;
+    font-size: 27px;
+    margin-bottom: 20px;
+}
+
+.about-main p {
+    color: #dbe3ed;
+    font-size: 15px;
+    line-height: 1.8;
+    margin-bottom: 16px;
+}
+
+.about-main p:last-child {
+    margin-bottom: 0;
+}
+
+.about-highlights {
+    display: grid;
+    gap: 18px;
+}
+
+.about-card {
+    padding: 22px;
+    background: #f8fafc;
+    border: 1px solid #e3e8ef;
+    border-radius: 12px;
+    display: flex;
+    align-items: flex-start;
+    gap: 18px;
+    transition: 0.3s ease;
+}
+
+.about-card:hover {
+    transform: translateX(5px);
+    border-color: #f5c542;
+    box-shadow: 0 10px 25px rgba(11, 31, 58, 0.09);
+}
+
+.about-icon {
+    min-width: 48px;
+    height: 48px;
+    border-radius: 10px;
+    background: #fff4cc;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 23px;
+}
+
+.about-card h3 {
+    color: #0b1f3a;
+    font-size: 18px;
+    margin-bottom: 6px;
+}
+
+.about-card p {
+    color: #687386;
+    font-size: 13px;
+    line-height: 1.6;
+    margin: 0;
+}
+
+/* ABOUT MOBILE */
+
+@media (max-width: 800px) {
+
+    #about {
+        padding: 65px 15px;
+    }
+
+    .about-header h2 {
+        font-size: 30px;
+    }
+
+    .about-header p {
+        font-size: 15px;
+    }
+
+    .about-content {
+        grid-template-columns: 1fr;
+        gap: 25px;
+    }
+
+    .about-main {
+        padding: 28px 25px;
+    }
+
+    .about-main h3 {
+        font-size: 23px;
+    }
+}
+
+@media (max-width: 500px) {
+
+    .about-card {
+        padding: 18px;
+    }
+
+    .about-icon {
+        min-width: 42px;
+        height: 42px;
+        font-size: 20px;
+    }
+
+    .about-card h3 {
+        font-size: 17px;
+    }
+}
+/* ==========================================
+PROFESSIONAL WHY CHOOSE SECTION
+========================================== */
+
+#why-us {
+padding: 90px 20px;
+background: #f5f7fa;
+}
+
+/* HEADER */
+
+.why-header {
+max-width: 760px;
+margin: 0 auto 55px;
+text-align: center;
+}
+
+.why-header span {
+display: inline-block;
+color: #d5a900;
+font-size: 13px;
+font-weight: 700;
+letter-spacing: 2px;
+margin-bottom: 12px;
+}
+
+.why-header h2 {
+font-size: 38px;
+color: #0b1f3a;
+margin-bottom: 15px;
+}
+
+.why-header p {
+max-width: 650px;
+margin: 0 auto;
+color: #687386;
+font-size: 16px;
+line-height: 1.7;
+}
+
+/* GOLD LINE */
+
+.why-header h2::after {
+content: "";
+display: block;
+width: 55px;
+height: 4px;
+background: #f5c542;
+margin: 15px auto 0;
+border-radius: 5px;
+}
+
+/* GRID */
+
+.why-grid {
+max-width: 1150px;
+margin: 0 auto;
+display: grid;
+grid-template-columns: repeat(2, 1fr);
+gap: 22px;
+}
+
+/* BOX */
+
+.why-box {
+    position: relative;
+    display: flex;
+    align-items: stretch;
+    background: #ffffff;
+    border: 1px solid #e1e5ea;
+    border-radius: 14px;
+    overflow: hidden;
+    min-height: 190px;
+    box-shadow: 0 8px 25px rgba(11, 31, 58, 0.07);
+    transition: transform 0.3s ease, box-shadow 0.3s ease, border-color 0.3s ease;
+}
+.why-box:hover {
+    transform: translateY(-8px);
+    border-color: #f5c542;
+    box-shadow: 0 18px 40px rgba(11, 31, 58, 0.15);
+}
+/* NUMBER */
+
+.why-number {
+width: 75px;
+min-width: 75px;
+background: #0b1f3a;
+color: #f5c542;
+display: flex;
+align-items: center;
+justify-content: center;
+font-size: 20px;
+font-weight: bold;
+letter-spacing: 1px;
+}
+
+/* CONTENT */
+
+.why-content {
+padding: 28px 25px;
+}
+
+.why-icon {
+width: 48px;
+height: 48px;
+display: flex;
+align-items: center;
+justify-content: center;
+background: #fff4cc;
+border-radius: 10px;
+font-size: 23px;
+margin-bottom: 14px;
+}
+
+.why-content h3 {
+color: #0b1f3a;
+font-size: 20px;
+margin-bottom: 8px;
+}
+
+.why-content p {
+color: #687386;
+font-size: 14px;
+line-height: 1.7;
+margin: 0;
+}
+
+/* TABLET */
+
+@media (max-width: 800px) {
+
+#why-us {
+    padding: 70px 15px;
+}
+
+.why-header h2 {
+    font-size: 32px;
+}
+
+.why-grid {
+    grid-template-columns: 1fr;
+    max-width: 650px;
+}
+
+
+}
+
+/* MOBILE */
+
+@media (max-width: 500px) {
+
+.why-header {
+    margin-bottom: 35px;
+}
+
+.why-header h2 {
+    font-size: 28px;
+}
+
+.why-header p {
+    font-size: 14px;
+}
+
+.why-box {
+    min-height: auto;
+}
+
+.why-number {
+    width: 55px;
+    min-width: 55px;
+    font-size: 16px;
+}
+
+.why-content {
+    padding: 22px 18px;
+}
+
+.why-content h3 {
+    font-size: 18px;
+}
+
+.why-content p {
+    font-size: 13px;
+}
+
+}
+/* MANUFACTURING PROCESS SECTION */
+#process {
+    padding:90px 20px;
+    background:#ffffff;
+    text-align:center;
+}
+
+#process h2 {
+    font-size:38px;
+    color:#0b1f3a;
+    margin-bottom:15px;
+}
+
+#process h2::after {
+    content:"";
+    display:block;
+    width:60px;
+    height:4px;
+    background:#f5c542;
+    margin:14px auto 0;
+    border-radius:5px;
+}
+
+.process-intro {
+    max-width:700px;
+    margin:20px auto 50px;
+    color:#687386;
+    font-size:16px;
+    line-height:1.7;
+}
+
+.process-container {
+    max-width:1150px;
+    margin:0 auto;
+    display:grid;
+    grid-template-columns:repeat(4,1fr);
+    gap:20px;
+}
+
+.process-card {
+    position:relative;
+    background:#f8fafc;
+    border:1px solid #e1e5ea;
+    border-radius:14px;
+    padding:30px 22px;
+    min-height:220px;
+    transition:.3s ease;
+}
+
+.process-card:hover {
+    transform:translateY(-7px);
+    border-color:#f5c542;
+    box-shadow:0 15px 35px rgba(11,31,58,.12);
+}
+
+.process-number {
+    width:55px;
+    height:55px;
+    margin:0 auto 20px;
+    background:#0b1f3a;
+    color:#f5c542;
+    border-radius:50%;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    font-size:17px;
+    font-weight:bold;
+}
+
+.process-card h3 {
+    color:#0b1f3a;
+    font-size:20px;
+    margin-bottom:12px;
+}
+
+.process-card p {
+    color:#687386;
+    font-size:14px;
+    line-height:1.7;
+    margin:0;
+}
+
+@media (max-width:900px) {
+    .process-container {
+        grid-template-columns:repeat(2,1fr);
+        gap:18px;
+    }
+}
+
+@media (max-width:600px) {
+    #process {
+        padding:65px 15px;
+    }
+
+    #process h2 {
+        font-size:30px;
+    }
+
+    .process-intro {
+        font-size:14px;
+        margin-bottom:35px;
+    }
+
+    .process-container {
+        grid-template-columns:1fr;
+        max-width:500px;
+    }
+
+    .process-card {
+        min-height:auto;
+        padding:25px 20px;
+    }
+}
+/* PROFESSIONAL CONTACT SECTION */
+#contact {
+    padding:90px 20px;
+    background:#f5f7fa;
+    text-align:center;
+}
+
+/* CONTACT HEADER */
+
+.contact-header {
+    max-width: 760px;
+    margin: 0 auto 55px;
+    text-align: center;
+}
+
+.contact-header span {
+    display: inline-block;
+    color: #d5a900;
+    font-size: 13px;
+    font-weight: 700;
+    letter-spacing: 2px;
+    margin-bottom: 12px;
+}
+
+.contact-header h2 {
+    font-size: 38px;
+    color: #0b1f3a;
+    margin-bottom: 15px;
+}
+
+.contact-header h2::after {
+    content: "";
+    display: block;
+    width: 60px;
+    height: 4px;
+    background: #f5c542;
+    margin: 14px auto 0;
+    border-radius: 5px;
+}
+
+.contact-header p {
+    max-width: 680px;
+    margin: 20px auto 0;
+    color: #687386;
+    font-size: 16px;
+    line-height: 1.7;
+}
+
+#contact h2::after {
+    content:"";
+    display:block;
+    width:60px;
+    height:4px;
+    background:#f5c542;
+    margin:14px auto 0;
+    border-radius:5px;
+}
+
 .contact-intro {
-    color: #555;
-    font-size: 17px;
-    margin-bottom: 40px;
+    max-width:650px;
+    margin:20px auto 45px;
+    color:#687386;
+    font-size:16px;
+    line-height:1.7;
 }
 
 .contact-container {
-    max-width: 900px;
-    margin: 0 auto;
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    gap: 40px;
-    text-align: left;
+    max-width:1100px;
+    margin:0 auto;
+    display:grid;
+    grid-template-columns:1fr 1.2fr;
+    gap:25px;
+    text-align:left;
 }
 
 .contact-info,
 .quote-form {
-    flex: 1;
-    min-width: 300px;
-    padding: 30px;
-    background: #f5f7fa;
-    border-radius: 10px;
-    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.12);
+    background:#fff;
+    border:1px solid #e1e5ea;
+    border-radius:14px;
+    padding:32px;
+    box-shadow:0 8px 25px rgba(11,31,58,.07);
+}
+
+.contact-info {
+    background:linear-gradient(135deg,#0b1f3a,#132f52);
+    color:white;
+    position:relative;
+    overflow:hidden;
+}
+
+.contact-info::before {
+    content:"";
+    position:absolute;
+    width:180px;
+    height:180px;
+    background:rgba(245,197,66,.08);
+    border-radius:50%;
+    top:-70px;
+    right:-60px;
+}
+
+.contact-info::after {
+    content:"";
+    position:absolute;
+    width:120px;
+    height:120px;
+    background:rgba(245,197,66,.05);
+    border-radius:50%;
+    bottom:-50px;
+    left:-40px;
 }
 
 .contact-info h3,
 .quote-form h3 {
-    color: #0b1f3a;
-    font-size: 24px;
-    margin-bottom: 20px;
+    font-size:24px;
+    margin-bottom:25px;
+}
+
+.contact-info h3 {
+    color:#f5c542;
 }
 
 .contact-info p {
-    color: #555;
-    margin-bottom: 15px;
-    line-height: 1.6;
+    color:#dbe3ed;
+    font-size:15px;
+    line-height:1.7;
+    margin-bottom:18px;
+    position:relative;
+    z-index:1;
 }
 
-.quote-form form {
-    display: flex;
-    flex-direction: column;
-    gap: 15px;
+.contact-info strong {
+    color:#f5c542;
+}
+
+.contact-info p:last-child {
+    margin-bottom:0;
+}
+
+/* =================================
+   PREMIUM REQUEST A QUOTE FORM
+================================= */
+
+.quote-form {
+    background: #ffffff;
+    border: 1px solid #e1e5ea;
+    border-radius: 16px;
+    padding: 32px;
+    box-shadow: 0 12px 35px rgba(11, 31, 58, 0.08);
+}
+
+.quote-form h3 {
+    color: #0b1f3a;
+    font-size: 25px;
+    margin-bottom: 8px;
+}
+
+.quote-form h3::after {
+    content: "";
+    display: block;
+    width: 45px;
+    height: 3px;
+    background: #f5c542;
+    margin-top: 10px;
+    border-radius: 5px;
 }
 
 .quote-form input,
 .quote-form select,
 .quote-form textarea {
     width: 100%;
-    padding: 12px;
-    border: 1px solid #ccc;
-    border-radius: 6px;
+    padding: 14px 15px;
+    margin-bottom: 16px;
+
+    border: 1px solid #dce2e9;
+    border-radius: 9px;
+
     font-family: Arial, sans-serif;
-    font-size: 15px;
+    font-size: 14px;
+
+    color: #0b1f3a;
+    background: #f9fafc;
+
+    outline: none;
+    transition: all 0.3s ease;
+}
+
+.quote-form input:focus,
+.quote-form select:focus,
+.quote-form textarea:focus {
+    background: #ffffff;
+    border-color: #f5c542;
+    box-shadow: 0 0 0 3px rgba(245, 197, 66, 0.13);
 }
 
 .quote-form textarea {
+    min-height: 125px;
     resize: vertical;
 }
 
 .quote-form button {
-    padding: 13px;
+    width: 100%;
+    padding: 15px;
+
     border: none;
-    border-radius: 6px;
-    background: #f5c542;
-    color: #0b1f3a;
-    font-size: 16px;
+    border-radius: 9px;
+
+    background: #0b1f3a;
+    color: #ffffff;
+
+    font-size: 15px;
     font-weight: bold;
+
     cursor: pointer;
-    transition: 0.3s;
+    transition: all 0.3s ease;
 }
 
 .quote-form button:hover {
-    background: #0b1f3a;
-    color: white;
+    background: #f5c542;
+    color: #0b1f3a;
+    transform: translateY(-2px);
+    box-shadow: 0 8px 20px rgba(245, 197, 66, 0.25);
 }
 
-.quote-form small {
+.quote-form > small {
     display: block;
-    margin-top: 12px;
-    color: #777;
-    font-size: 12px;
-}
-footer {
-    background: #0b1f3a;
-    color: white;
+    margin-top: 14px;
+
+    color: #8a94a6;
     text-align: center;
-    padding: 35px 20px 15px;
+
+    font-size: 12px;
+    line-height: 1.5;
 }
 
-.footer-content h3 {
+
+#inquiryMessage {
+    color:#16803c;
+    font-size:13px;
+    margin-top:12px;
+    text-align:center;
+}
+/* EXTRA CABLE INFORMATION BOX */
+
+.contact-extra-box {
+    margin-top: 8px;
+    padding: 18px 20px;
+
+    display: flex;
+    align-items: flex-start;
+    gap: 15px;
+
+    background: rgba(245, 197, 66, 0.08);
+    border: 1px solid rgba(245, 197, 66, 0.25);
+    border-radius: 14px;
+
+    transition: all 0.3s ease;
+}
+
+.contact-extra-box:hover {
+    background: rgba(245, 197, 66, 0.13);
+    border-color: rgba(245, 197, 66, 0.55);
+    transform: translateY(-3px);
+}
+
+.contact-extra-icon {
+    width: 42px;
+    height: 42px;
+    min-width: 42px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    background: #f5c542;
+    color: #0b1f3a;
+
+    border-radius: 11px;
+
+    font-size: 19px;
+
+    box-shadow: 0 5px 15px rgba(245, 197, 66, 0.2);
+}
+
+.contact-extra-box h3 {
+    margin: 0 0 5px;
     color: #f5c542;
-    font-size: 26px;
-    margin-bottom: 10px;
-}
-
-.footer-content p {
-    margin: 7px 0;
-    color: #ddd;
     font-size: 14px;
 }
 
+.contact-extra-box p {
+    margin: 0;
+    color: #dbe3ed;
+    font-size: 13px;
+    line-height: 1.6;
+}
+
+@media (max-width:800px) {
+    #contact {
+        padding:65px 15px;
+    }
+.contact-header h2 {
+    font-size: 30px;
+}
+
+    .contact-container {
+        grid-template-columns:1fr;
+        max-width:650px;
+    }
+
+    .contact-info,
+    .quote-form {
+        padding:25px;
+    }
+}
+/* =================================
+   PREMIUM CONTACT INFO
+================================= */
+
+.contact-info {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+    padding: 28px !important;
+}
+
+.contact-info-box {
+    position: relative;
+    display: flex;
+    align-items: center;
+    gap: 18px;
+
+    padding: 18px 20px;
+
+    background: rgba(255, 255, 255, 0.08);
+    border: 1px solid rgba(245, 197, 66, 0.18);
+    border-radius: 14px;
+
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.12);
+
+    transition: all 0.35s ease;
+}
+
+
+.contact-info-box:hover {
+    transform: translateX(7px);
+    background: rgba(255, 255, 255, 0.13);
+    border-color: rgba(245, 197, 66, 0.55);
+    box-shadow: 0 12px 30px rgba(0, 0, 0, 0.18);
+}
+
+.contact-icon {
+    width: 52px;
+    height: 52px;
+    min-width: 52px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    background: #f5c542;
+    color: #0b1f3a;
+
+    border-radius: 13px;
+
+    font-size: 22px;
+
+    box-shadow: 0 6px 18px rgba(245, 197, 66, 0.22);
+
+    transition: all 0.35s ease;
+}
+
+.contact-info-box:hover .contact-icon {
+    transform: scale(1.08) rotate(-3deg);
+    box-shadow: 0 8px 22px rgba(245, 197, 66, 0.35);
+}
+
+.contact-info-box h3 {
+    margin: 0 0 5px;
+
+    color: #f5c542;
+
+    font-size: 15px;
+    font-weight: 700;
+    letter-spacing: 0.3px;
+}
+
+.contact-info-box p {
+    margin: 0;
+
+    color: #ffffff;
+
+    font-size: 15px;
+    line-height: 1.5;
+}
+
+/* CONTACT INFO MOBILE */
+
+@media (max-width: 500px) {
+
+    .contact-info {
+        padding: 22px !important;
+        gap: 14px;
+    }
+
+    .contact-info-box {
+        padding: 16px;
+        gap: 14px;
+    }
+
+    .contact-icon {
+        width: 46px;
+        height: 46px;
+        min-width: 46px;
+        font-size: 19px;
+    }
+
+    .contact-info-box h3 {
+        font-size: 14px;
+    }
+
+    .contact-info-box p {
+        font-size: 14px;
+    }
+  .contact-extra-box {
+    padding: 16px;
+    gap: 12px;
+}
+
+.contact-extra-box p {
+    font-size: 12px;
+}
+
+}
+/* =================================
+   CONTACT MOBILE FINISH
+================================= */
+
+@media (max-width: 768px) {
+
+    #contact {
+        padding: 70px 15px;
+    }
+
+    .contact-header {
+        margin-bottom: 40px;
+    }
+
+    .contact-header h2 {
+        font-size: 30px;
+    }
+
+    .contact-header p {
+        font-size: 14px;
+        line-height: 1.6;
+    }
+
+    .contact-container {
+        grid-template-columns: 1fr;
+        gap: 20px;
+    }
+
+    .contact-info,
+    .quote-form {
+        padding: 24px !important;
+    }
+
+    .quote-form h3 {
+        font-size: 22px;
+    }
+
+    .quote-form button {
+        padding: 14px;
+        font-size: 14px;
+    }
+}
+
+/* PROFESSIONAL FOOTER */
+footer {
+    background:#0b1f3a;
+    color:#fff;
+    padding:45px 20px 0;
+    text-align:center;
+}
+
+.footer-content {
+    max-width:1100px;
+    margin:0 auto;
+}
+
+.footer-content h3 {
+    color:#f5c542;
+    font-size:26px;
+    margin-bottom:12px;
+}
+
+.footer-content p {
+    color:#dbe3ed;
+    font-size:14px;
+    line-height:1.7;
+    margin:6px 0;
+}
+
 .footer-bottom {
-    margin-top: 25px;
-    padding-top: 15px;
-    border-top: 1px solid #33445c;
+    max-width:1100px;
+    margin:30px auto 0;
+    padding:18px 0;
+    border-top:1px solid rgba(255,255,255,.12);
 }
 
 .footer-bottom p {
-    color: #aaa;
-    font-size: 13px;
-}
-@media (max-width: 768px) {
-.contact-container {
-    width: 100%;
+    color:#9eabbc;
+    font-size:12px;
+    margin:0;
 }
 
-.contact-info,
-.quote-form {
-    width: 100%;
-    box-sizing: border-box;
-}
-
-.quote-form input,
-.quote-form select,
-.quote-form textarea {
-    width: 100%;
-    box-sizing: border-box;
-}
-    nav {
-        flex-direction: column;
-        gap: 12px;
-    }
-
-    nav a {
-        margin: 0 6px;
-        font-size: 14px;
-    }
-
-    #home {
-        padding: 70px 20px;
-    }
-
-    #home h1 {
-        font-size: 38px;
-    }
-
-    #home p {
-        font-size: 16px;
-    }
-
-    .product-container {
-        flex-direction: column;
-        align-items: center;
-    }
-
-    .product-card {
-        width: 90%;
-        max-width: 320px;
-    }
-
-    .why-container {
-        flex-direction: column;
-        align-items: center;
-    }
-
-    .why-card {
-        width: 90%;
-        max-width: 320px;
-    }
-
-    .process-container {
-        flex-direction: column;
-        align-items: center;
-    }
-
-    .process-card {
-        width: 90%;
-        max-width: 320px;
-    }
-
-    .contact-container {
-        flex-direction: column;
-        align-items: center;
-    }
-
-    .contact-info,
-    .quote-form {
-        width: 90%;
-        max-width: 500px;
-    }
- #home {
-        padding: 45px 15px;
-    }
-
-    #home h1 {
-        font-size: 30px;
-        margin-bottom: 10px;
-    }
-
-    #home p {
-        font-size: 14px;
-        margin: 8px 0;
-    }
-
-    #products,
-    #about,
-    #why-us,
-    #process,
-    #contact {
-        padding: 40px 15px;
-    }
-
-    #products h2,
-    #about h2,
-    #why-us h2,
-    #process h2,
-    #contact h2 {
-        font-size: 25px;
-        margin-bottom: 15px;
-    }
-
-    .product-container {
-        gap: 15px;
-    }
-
-    .product-card {
-        padding: 15px;
-    }
-
-    .product-card img {
-        height: 110px;
-        margin-bottom: 10px;
-    }
-
-    .product-card h3 {
-        font-size: 18px;
-        margin: 5px 0;
-    }
-
-    .product-card p {
-        font-size: 13px;
-        margin: 5px 0;
-    }
-
-    .quote-btn {
-        padding: 9px 12px;
-    }
-}
-/* Mobile screen fix */
-* {
-    box-sizing: border-box;
-}
-
-html, body {
-    width: 100%;
-    max-width: 100%;
-    overflow-x: hidden;
-}
-
-img {
-    max-width: 100%;
-    height: auto;
-}
-
-@media (max-width: 768px) {
-
-    header {
-        width: 100%;
-    }
-
-    nav {
-        width: 100%;
-        flex-wrap: wrap;
-        justify-content: center;
-    }
-
-    #home,
-    #products,
-    #about,
-    #why-us,
-    #process,
-    #contact {
-        width: 100%;
-        max-width: 100%;
-    }
-
-    .product-container,
-    .why-container,
-    .process-container,
-    .contact-container {
-        width: 100%;
-        max-width: 100%;
-        padding-left: 10px;
-        padding-right: 10px;
-    }
-
-    .product-card,
-    .why-card,
-    .process-card,
-    .contact-info,
-    .quote-form {
-        max-width: 100%;
-    }
-
-    input,
-    select,
-    textarea {
-        max-width: 100%;
-    }
-}
-    /* FINAL MOBILE COMPACT DESIGN */
-
-@media (max-width: 768px) {
-
-    header {
-        padding: 12px 10px;
-    }
-
-    header h1 {
-        font-size: 24px;
-        margin: 5px 0;
-    }
-
-    nav {
-        gap: 5px;
-        padding: 5px;
-    }
-
-    nav a {
-        font-size: 13px;
-        padding: 5px;
-        margin: 0 3px;
-    }
-
-    #home {
-        padding: 35px 15px;
-    }
-
-    #home h1 {
-        font-size: 30px;
-        margin: 5px 0 8px;
-    }
-
-    #home p {
-        font-size: 14px;
-        margin: 6px 0;
-    }
-
-    #home .btn {
-        padding: 9px 16px;
-        margin-top: 8px;
-    }
-
-    #products,
-    #about,
-    #why-us,
-    #process,
-    #contact {
-        padding: 30px 12px;
-    }
-
-    #products h2,
-    #about h2,
-    #why-us h2,
-    #process h2,
-    #contact h2 {
-        font-size: 24px;
-        margin: 0 0 12px;
-    }
-
-    .product-container {
-        gap: 12px;
-    }
-
-    .product-card {
-        width: 94%;
-        max-width: 300px;
-        min-height: auto;
-        padding: 12px;
-    }
-
-    .product-card img {
-        height: 95px;
-        margin-bottom: 8px;
-    }
-
-    .product-card h3 {
-        font-size: 17px;
-        margin: 4px 0;
-    }
-
-    .product-card p {
-        font-size: 13px;
-        margin: 4px 0;
-    }
-
-    .quote-btn {
-        padding: 8px 10px;
-        font-size: 13px;
-    }
-
-    .product-card small {
-        font-size: 11px;
-        margin-top: 5px;
-    }
-
-    .why-container,
-    .process-container {
-        gap: 12px;
-    }
-
-    .why-card,
-    .process-card {
-        width: 94%;
-        max-width: 300px;
-        padding: 15px;
-    }
-
-    .contact-container {
-        gap: 15px;
-    }
-
-    .contact-info,
-    .quote-form {
-        padding: 15px;
-    }
-
-    .quote-form input,
-    .quote-form select,
-    .quote-form textarea {
-        padding: 9px;
-        margin-bottom: 8px;
-    }
-
+@media (max-width:600px) {
     footer {
-        padding: 25px 15px 12px;
+        padding:35px 15px 0;
     }
+
+    .footer-content h3 {
+        font-size:23px;
+    }
+
+    .footer-content p {
+        font-size:13px;
+    }
+
+    .footer-bottom {
+        margin-top:25px;
+    }
+}
+#backToTop {
+    position: fixed;
+    right: 25px;
+    bottom: 25px;
+    width: 50px;
+    height: 50px;
+    background: #f5c542;
+    color: #0b1f3a;
+    border: none;
+    border-radius: 50%;
+    font-size: 24px;
+    font-weight: bold;
+    cursor: pointer;
+    z-index: 9999;
+    display: none;
+    box-shadow: 0 5px 20px rgba(0,0,0,0.2);
+}
+
+#backToTop:hover {
+    background: #0b1f3a;
+    color: white;
+}
+html {
+    scroll-behavior: smooth;
+}
+/* =================================
+   WHATSAPP FLOATING BUTTON
+================================= */
+
+.whatsapp-float {
+    position: fixed;
+    right: 22px;
+    bottom: 22px;
+
+    width: 58px;
+    height: 58px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    background: #25D366;
+    color: #ffffff;
+
+    border-radius: 50%;
+
+    font-size: 27px;
+    text-decoration: none;
+
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.22);
+
+    z-index: 9999;
+
+    transition: all 0.3s ease;
+}
+
+.whatsapp-float:hover {
+    transform: translateY(-5px) scale(1.05);
+    box-shadow: 0 12px 30px rgba(0, 0, 0, 0.28);
+}
+
+/* MOBILE */
+
+@media (max-width: 500px) {
+
+    .whatsapp-float {
+        width: 52px;
+        height: 52px;
+        right: 16px;
+        bottom: 80px;
+        font-size: 24px;
+    }
+}
+/* =================================
+   BACK TO TOP + WHATSAPP FIX
+================================= */
+
+#backToTop {
+    position: fixed;
+    right: 22px;
+    bottom: 22px;
+
+    width: 50px;
+    height: 50px;
+
+    display: none;
+    align-items: center;
+    justify-content: center;
+
+    background: #f5c542;
+    color: #0b1f3a;
+
+    border: none;
+    border-radius: 50%;
+
+    font-size: 22px;
+    font-weight: bold;
+
+    cursor: pointer;
+
+    z-index: 10000;
+
+    box-shadow: 0 8px 20px rgba(0,0,0,.2);
+}
+
+.whatsapp-float {
+    position: fixed;
+    right: 22px;
+    bottom: 85px;
+
+    width: 55px;
+    height: 55px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    background: #25D366;
+    color: white;
+
+    border-radius: 50%;
+
+    font-size: 26px;
+    text-decoration: none;
+
+    z-index: 9999;
+
+    box-shadow: 0 8px 20px rgba(0,0,0,.2);
+}
+/* =================================
+   PREMIUM NAVBAR
+================================= */
+
+header {
+    position: sticky;
+    top: 0;
+    z-index: 9998;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    padding: 16px 60px;
+
+    background: rgba(11, 31, 58, 0.97);
+    border-bottom: 1px solid rgba(245, 197, 66, 0.15);
+
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.12);
+}
+
+.logo {
+    color: #ffffff;
+    font-size: 27px;
+    font-weight: 800;
+    letter-spacing: 0.5px;
+}
+
+nav {
+    display: flex;
+    align-items: center;
+    gap: 30px;
+}
+
+nav a {
+    position: relative;
+
+    color: #ffffff;
+    text-decoration: none;
+
+    font-size: 15px;
+    font-weight: 600;
+
+    padding: 8px 0;
+
+    transition: color 0.3s ease;
+}
+
+nav a::after {
+    content: "";
+
+    position: absolute;
+    left: 0;
+    bottom: 0;
+
+    width: 0;
+    height: 2px;
+
+    background: #f5c542;
+    border-radius: 5px;
+
+    transition: width 0.3s ease;
+}
+
+nav a:hover {
+    color: #f5c542;
+}
+
+nav a:hover::after {
+    width: 100%;
+}
+/* =================================
+   NAVBAR MOBILE
+================================= */
+
+@media (max-width: 768px) {
+
+    header {
+        padding: 14px 18px;
+        flex-direction: column;
+        gap: 12px;
+    }
+
+    .logo {
+        font-size: 24px;
+    }
+
+    nav {
+        width: 100%;
+        justify-content: center;
+        gap: 18px;
+        flex-wrap: wrap;
+    }
+
+    nav a {
+        font-size: 13px;
+        padding: 5px 0;
+    }
+}
+/* =================================
+   FINAL MOBILE SPACING POLISH
+================================= */
+
+@media (max-width: 768px) {
+
+    section {
+        padding-left: 15px;
+        padding-right: 15px;
+    }
+
+    h1 {
+        font-size: 34px;
+        line-height: 1.15;
+    }
+
+    h2 {
+        font-size: 29px;
+        line-height: 1.2;
+    }
+
+    p {
+        line-height: 1.6;
+    }
+
+    .container {
+        width: 100%;
+        max-width: 100%;
+    }
+
+    img {
+        max-width: 100%;
+        height: auto;
+    }
+
+    button,
+    a {
+        -webkit-tap-highlight-color: transparent;
+    }
+
+    .whatsapp-float {
+        right: 16px;
+        bottom: 85px;
+    }
+
+    #backToTop {
+        right: 16px;
+        bottom: 18px;
+    }
+}
+/* =================================
+   FINAL BUTTON POLISH
+================================= */
+
+button,
+.hero-btn,
+.quote-btn,
+nav a {
+    transition: all 0.3s ease;
+}
+
+button:hover,
+.hero-btn:hover,
+.quote-btn:hover {
+    transform: translateY(-2px);
+}
+
+button:active,
+.hero-btn:active,
+.quote-btn:active {
+    transform: translateY(0);
 }
 </style>
 </head>
@@ -765,137 +1900,333 @@ img {
     </nav>
 </header>
 <section id="home">
-    <div class="hero-text">
-        <h1>A.M. Cables</h1>
-        <h2>Quality Wires. Reliable Connections.</h2>
-        <p>We manufacture quality cables for reliable electrical connections.</p>
+    <div class="hero-content">
 
-        <a href="#products" class="hero-btn">View Products</a>
+        <div class="hero-left">
+            <span class="hero-tag">CABLE MANUFACTURING</span>
+
+            <h1>A.M. Cables</h1>
+
+            <h2>Quality Wires.<br>Reliable Connections.</h2>
+
+            <p>
+                We manufacture quality electrical cables with a focus on
+                reliable connections, consistent manufacturing and customer satisfaction.
+            </p>
+
+            <div class="hero-buttons">
+                <a href="#products" class="hero-btn">View Products</a>
+                <a href="#contact" class="hero-btn hero-btn-outline">Request a Quote</a>
+            </div>
+        </div>
+
+        <div class="hero-right">
+            <div class="hero-card">
+                <div class="hero-card-icon">⚡</div>
+                <h3>Reliable Cable Manufacturing</h3>
+                <p>
+                    Quality-focused cable production for electrical applications
+                    and business requirements.
+                </p>
+
+                <div class="hero-line"></div>
+
+                <div class="hero-mini-info">
+                    <div>
+                        <strong>Quality</strong>
+                        <span>Focused</span>
+                    </div>
+
+                    <div>
+                        <strong>Products</strong>
+                        <span>Multiple Types</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+
     </div>
 </section>
+
 <section id="products">
-    <h2>Our Products</h2>
+
+    <div class="products-header">
+        <span>OUR PRODUCTS</span>
+        <h2>Quality Cable Solutions</h2>
+        <p>
+            Explore our range of electrical cables manufactured with
+            a focus on quality, reliability and consistent performance.
+        </p>
+    </div>
 
     <div class="product-container">
 
         <div class="product-card">
-            <img src="https://images.unsplash.com/photo-1558618666-fcd25c85cd64?auto=format&fit=crop&w=600&q=80" alt="23.76 Flat Cable">
-            <h3>23.76 Flat Cable</h3>
-            <p>Reliable quality cable for electrical wiring and connections.</p>
-            <a href="#contact" class="quote-btn" onclick="selectProduct('23.76 Flat Cable')">Request a Quote</a>
-<small>Product ke price aur availability ke liye poochhein.</small>
+            <div class="product-image">
+                <img src="images/23-76-cable.jpg" alt="23.76 Flat and Goal Cables">
+                <span class="product-badge">PRODUCT</span>
+            </div>
+
+            <div class="product-content">
+                <h3>23.76 Flat & Goal Cables</h3>
+                <p>
+                    Quality flat and goal cables manufactured for
+                    reliable electrical wiring and connections.
+                </p>
+
+                <a href="#contact"
+                   class="quote-btn"
+                   onclick="selectProduct('23.76 Flat & Goal Cables')">
+                    Request a Quote
+                </a>
+            </div>
         </div>
 
-        <div class="product-card">
-            <img src="https://images.unsplash.com/photo-1558618666-fcd25c85cd64?auto=format&fit=crop&w=600&q=80" alt="23.76 Goal Cable">
-            <h3>23.76 Goal Cable</h3>
-            <p>Strong and reliable cable designed for electrical applications.</p>
-          <a href="#contact" class="quote-btn" onclick="selectProduct('23.76 Goal Cable')">Request a Quote</a>
-<small>Product ke price aur availability ke liye poochhein.</small>
-        </div>
 
         <div class="product-card">
-            <img src="https://images.unsplash.com/photo-1558618666-fcd25c85cd64?auto=format&fit=crop&w=600&q=80" alt="40.76 Flat Cable">
-            <h3>40.76 Flat Cable</h3>
-            <p>Quality cable manufactured for dependable electrical connections.</p>
-      <a href="#contact" class="quote-btn" onclick="selectProduct('40.76 Flat Cable')">Request a Quote</a>
-<small>Product ke price aur availability ke liye poochhein.</small>
+            <div class="product-image">
+                <img src="images/40-76-cable.jpg" alt="40.76 Flat and Goal Cables">
+                <span class="product-badge">PRODUCT</span>
+            </div>
+
+            <div class="product-content">
+                <h3>40.76 Flat & Goal Cables</h3>
+                <p>
+                    Reliable flat and goal cables designed for
+                    dependable electrical applications.
+                </p>
+
+                <a href="#contact"
+                   class="quote-btn"
+                   onclick="selectProduct('40.76 Flat & Goal Cables')">
+                    Request a Quote
+                </a>
+            </div>
         </div>
 
-        <div class="product-card">
-            <img src="https://images.unsplash.com/photo-1558618666-fcd25c85cd64?auto=format&fit=crop&w=600&q=80" alt="40.76 Goal Cable">
-            <h3>40.76 Goal Cable</h3>
-            <p>Reliable cable suitable for electrical wiring applications.</p>
-     <a href="#contact" class="quote-btn" onclick="selectProduct('40.76 Goal Cable')">Request a Quote</a>
-<small>Product ke price aur availability ke liye poochhein.</small>
-        </div>
 
         <div class="product-card">
-            <img src="https://images.unsplash.com/photo-1558618666-fcd25c85cd64?auto=format&fit=crop&w=600&q=80" alt="3.29 Cable">
-            <h3>3.29 Cable</h3>
-            <p>Quality cable manufactured for reliable electrical connections.</p>
-      <a href="#contact" class="quote-btn" onclick="selectProduct('3.29 Cable')">Request a Quote</a>
-<small>Product ke price aur availability ke liye poochhein.</small>
+            <div class="product-image">
+                <img src="images/110-76-cable.jpg" alt="110.76 Cable">
+                <span class="product-badge">PRODUCT</span>
+            </div>
+
+            <div class="product-content">
+                <h3>110.76 Cable</h3>
+                <p>
+                    Reliable cable manufactured for electrical
+                    wiring and dependable connections.
+                </p>
+
+                <a href="#contact"
+                   class="quote-btn"
+                   onclick="selectProduct('110.76 Cable')">
+                    Request a Quote
+                </a>
+            </div>
         </div>
 
-        <div class="product-card">
-            <img src="https://images.unsplash.com/photo-1558618666-fcd25c85cd64?auto=format&fit=crop&w=600&q=80" alt="7.29 Cable">
-            <h3>7.29 Cable</h3>
-            <p>Durable cable for dependable electrical wiring applications.</p>
-<a href="#contact" class="quote-btn" onclick="selectProduct('7.29 Cable')">Request a Quote</a>
-<small>Product ke price aur availability ke liye poochhein.</small>
-        </div>
 
         <div class="product-card">
-            <img src="https://images.unsplash.com/photo-1558618666-fcd25c85cd64?auto=format&fit=crop&w=600&q=80" alt="WAPDA Cable">
-            <h3>WAPDA Cable</h3>
-            <p>Reliable cable manufactured for electrical power applications.</p>
-   <a href="#contact" class="quote-btn" onclick="selectProduct('WAPDA Cable')">Request a Quote</a>
-<small>Product ke price aur availability ke liye poochhein.</small>
+            <div class="product-image">
+                <img src="images/3-29-cable.jpg" alt="3.29 Cable">
+                <span class="product-badge">PRODUCT</span>
+            </div>
+
+            <div class="product-content">
+                <h3>3.29 Cable</h3>
+                <p>
+                    Quality cable manufactured for reliable
+                    electrical connections.
+                </p>
+
+                <a href="#contact"
+                   class="quote-btn"
+                   onclick="selectProduct('3.29 Cable')">
+                    Request a Quote
+                </a>
+            </div>
+        </div>
+
+
+        <div class="product-card">
+            <div class="product-image">
+                <img src="images/7-29-cable.jpg" alt="7.29 Cable">
+                <span class="product-badge">PRODUCT</span>
+            </div>
+
+            <div class="product-content">
+                <h3>7.29 Cable</h3>
+                <p>
+                    Durable cable for dependable electrical
+                    wiring applications.
+                </p>
+
+                <a href="#contact"
+                   class="quote-btn"
+                   onclick="selectProduct('7.29 Cable')">
+                    Request a Quote
+                </a>
+            </div>
+        </div>
+
+
+        <div class="product-card">
+            <div class="product-image">
+                <img src="images/wapda-cable.jpg" alt="WAPDA Cable">
+                <span class="product-badge">PRODUCT</span>
+            </div>
+
+            <div class="product-content">
+                <h3>WAPDA Cable</h3>
+                <p>
+                    Reliable cable manufactured for electrical
+                    power applications.
+                </p>
+
+                <a href="#contact"
+                   class="quote-btn"
+                   onclick="selectProduct('WAPDA Cable')">
+                    Request a Quote
+                </a>
+            </div>
         </div>
 
     </div>
+
 </section>
-<section id="about">
-    <h2>About A.M. Cables</h2>
+ <section id="about">
 
-    <p>
-        A.M. Cables is a cable manufacturing company focused on producing
-        reliable and quality electrical cables for everyday electrical needs.
-    </p>
+    <div class="about-header">
+        <span>ABOUT OUR COMPANY</span>
+        <h2>About A.M. Cables</h2>
+        <p>
+            Reliable cable manufacturing focused on quality,
+            dependable connections and long-term customer relationships.
+        </p>
+    </div>
 
-    <p>
-        We manufacture a range of cables including Flat Cable, Goal Cable,
-        3.29 Cable, 7.29 Cable and WAPDA Cable.
-    </p>
+    <div class="about-content">
 
-    <p>
-        Our focus is on quality manufacturing, reliable connections and
-        customer satisfaction.
-    </p>
+        <div class="about-main">
+            <h3>Quality Wires. Reliable Connections.</h3>
+
+            <p>
+                A.M. Cables is a cable manufacturing company focused on
+                producing reliable and quality electrical cables for
+                everyday electrical needs.
+            </p>
+
+            <p>
+                We manufacture a range of cables including Flat Cable,
+                Goal Cable, 3.29 Cable, 7.29 Cable, 110.76 Cable
+                and WAPDA Cable.
+            </p>
+
+            <p>
+                Our focus is on quality manufacturing, reliable connections
+                and customer satisfaction.
+            </p>
+        </div>
+
+        <div class="about-highlights">
+
+            <div class="about-card">
+                <div class="about-icon">⚡</div>
+                <h3>Quality Focus</h3>
+                <p>
+                    We focus on producing reliable and quality cables
+                    for electrical applications.
+                </p>
+            </div>
+
+            <div class="about-card">
+                <div class="about-icon">🏭</div>
+                <h3>Manufacturing</h3>
+                <p>
+                    Our cables are manufactured with attention to
+                    quality and reliable performance.
+                </p>
+            </div>
+
+            <div class="about-card">
+                <div class="about-icon">🤝</div>
+                <h3>Customer Focus</h3>
+                <p>
+                    We value long-term business relationships and
+                    customer satisfaction.
+                </p>
+            </div>
+
+        </div>
+
+    </div>
+
 </section>
-<section id="why-us">
+
+   <section id="why-us">
+
+<div class="why-header">
+    <span>WHY A.M. CABLES</span>
     <h2>Why Choose A.M. Cables?</h2>
+    <p>
+        Built with quality, consistency and reliability for
+        electrical applications and business needs.
+    </p>
+</div>
 
-    <div class="why-container">
+<div class="why-grid">
 
-        <div class="why-card">
+    <div class="why-box">
+        <div class="why-number">01</div>
+        <div class="why-content">
             <div class="why-icon">⚡</div>
-            <h3>Quality Products</h3>
+            <h3>Quality Cables</h3>
             <p>
-                We focus on producing reliable and quality cables
-                for electrical applications.
+                We focus on producing dependable cables
+                designed for reliable electrical performance.
             </p>
         </div>
-
-        <div class="why-card">
-            <div class="why-icon">🏭</div>
-            <h3>Manufacturing</h3>
-            <p>
-                Our cables are manufactured with attention to
-                quality and reliable performance.
-            </p>
-        </div>
-
-        <div class="why-card">
-            <div class="why-icon">🤝</div>
-            <h3>Reliable Service</h3>
-            <p>
-                We value long-term business relationships and
-                customer satisfaction.
-            </p>
-        </div>
-
-        <div class="why-card">
-            <div class="why-icon">🔌</div>
-            <h3>Wide Range</h3>
-            <p>
-                We manufacture different cable types for various
-                electrical requirements.
-            </p>
-        </div>
-
     </div>
+
+    <div class="why-box">
+        <div class="why-number">02</div>
+        <div class="why-content">
+            <div class="why-icon">🏭</div>
+            <h3>Manufacturing Focus</h3>
+            <p>
+                Our manufacturing process is focused on
+                consistency, quality and dependable output.
+            </p>
+        </div>
+    </div>
+
+    <div class="why-box">
+        <div class="why-number">03</div>
+        <div class="why-content">
+            <div class="why-icon">🔌</div>
+            <h3>Reliable Performance</h3>
+            <p>
+                Our cables are made to support dependable
+                performance across electrical applications.
+            </p>
+        </div>
+    </div>
+
+    <div class="why-box">
+        <div class="why-number">04</div>
+        <div class="why-content">
+            <div class="why-icon">🤝</div>
+            <h3>Business Reliability</h3>
+            <p>
+                We value professional service, customer
+                satisfaction and long-term business relationships.
+            </p>
+        </div>
+    </div>
+
+</div>
+
 </section>
 <section id="process">
     <h2>Our Manufacturing Process</h2>
@@ -942,20 +2273,61 @@ img {
     </div>
 </section>
 <section id="contact">
+   <div class="contact-header">
+    <span>GET IN TOUCH</span>
+
     <h2>Contact A.M. Cables</h2>
 
-    <p class="contact-intro">
-        Product ke price aur availability ke liye poochhein.
+    <p>
+        For product prices, availability and business inquiries,
+        feel free to contact us.
     </p>
-
+</div>
     <div class="contact-container">
 
         <div class="contact-info">
-            <h3>Get In Touch</h3>
-            <p><strong>Company:</strong> A.M. Cables</p>
-          <p><strong>Phone:</strong> 0305-4335465</p>
-            <p><strong>Location:</strong> Lahore, Pakistan</p>
+
+    <div class="contact-info-box">
+        <div class="contact-icon">🏭</div>
+        <div>
+            <h3>Company</h3>
+            <p>A.M. Cables</p>
         </div>
+    </div>
+
+    <div class="contact-info-box">
+        <div class="contact-icon">📞</div>
+        <div>
+            <h3>Phone</h3>
+            <p>0305-4335465</p>
+        </div>
+    </div>
+
+      <div class="contact-info-box">
+        <div class="contact-icon">📍</div>
+        <div>
+            <h3>Location</h3>
+            <p>Lahore, Pakistan</p>
+        </div>
+    </div>
+
+    <div class="contact-extra-box">
+
+        <div class="contact-extra-icon">💡</div>
+
+        <div>
+            <h3>Need Another Cable?</h3>
+
+            <p>
+                Agar aapko kisi aur type ki cable chahiye,
+                humse contact karein. Aapko availability aur
+                complete product information provide ki jayegi.
+            </p>
+        </div>
+
+    </div>
+
+</div>
 
         <div class="quote-form">
             <h3>Request a Quote</h3>
@@ -966,18 +2338,17 @@ img {
 
                 <select id="product" required>
                     <option value="">Select Product</option>
-                    <option>23.76 Flat Cable</option>
-                    <option>23.76 Goal Cable</option>
-                    <option>40.76 Flat Cable</option>
-                    <option>40.76 Goal Cable</option>
+                    <option>23.76 Flat & Goal Cables</option>
+                    <option>40.76 Flat & Goal Cables</option>
                     <option>3.29 Cable</option>
                     <option>7.29 Cable</option>
+                    <option>110.76 Cable</option>
                     <option>WAPDA Cable</option>
                 </select>
 
                 <textarea id="requirement" placeholder="Your Requirement" rows="5" required></textarea>
 
-                <button type="submit">Send Inquiry</button>
+                <button type="submit">Send Inquiry on WhatsApp</button>
 
                 <p id="inquiryMessage" style="display:none;">
     Your inquiry is ready. WhatsApp will open now. ✅
@@ -1001,6 +2372,7 @@ img {
         <p>© 2026 A.M. Cables. All Rights Reserved.</p>
     </div>
 </footer>
+<button id="backToTop">↑</button>
 <script>
    function selectProduct(productName) {
        document.getElementById("product").value = productName;
@@ -1027,6 +2399,30 @@ img {
         window.location.href =
             "https://wa.me/923054335465?text=" + message;
     });
+const backToTop = document.getElementById("backToTop");
+
+window.onscroll = function() {
+    if (document.documentElement.scrollTop > 300) {
+        backToTop.style.display = "block";
+    } else {
+        backToTop.style.display = "none";
+    }
+};
+
+backToTop.onclick = function() {
+    window.scrollTo({
+        top: 0,
+        behavior: "smooth"
+    });
+};
+
 </script>
+<a href="https://wa.me/923054335465"
+   class="whatsapp-float"
+   target="_blank"
+   aria-label="Chat on WhatsApp">
+    💬
+</a>
+
 </body>
 </html>
