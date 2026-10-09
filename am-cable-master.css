@@ -1,0 +1,3054 @@
+/* =========================================================
+   A.M. CABLES — PREMIUM MASTER CSS
+   PART 1: GLOBAL STYLES + NAVBAR + HERO
+   Theme: Premium Navy & Gold
+   ========================================================= */
+
+/* ---------- 1. GLOBAL VARIABLES ---------- */
+
+:root {
+    --am-navy: #0b1f3a;
+    --am-navy-light: #153657;
+    --am-gold: #f5c542;
+    --am-gold-light: #ffe27a;
+    --am-white: #ffffff;
+    --am-text: #253247;
+    --am-muted: #687589;
+    --am-light: #f5f7fb;
+    --am-border: #e3e8f0;
+
+    --am-radius: 18px;
+    --am-transition: 0.3s ease;
+
+    --am-shadow:
+        0 12px 35px rgba(11, 31, 58, 0.10);
+
+    --am-shadow-hover:
+        0 20px 45px rgba(11, 31, 58, 0.17);
+}
+
+/* ---------- 2. RESET ---------- */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+    scroll-padding-top: 90px;
+}
+
+body {
+    min-width: 320px;
+    overflow-x: hidden;
+    font-family: "Segoe UI", Arial, sans-serif;
+    color: var(--am-text);
+    background: var(--am-white);
+    line-height: 1.6;
+}
+
+img {
+    display: block;
+    max-width: 100%;
+}
+
+a {
+    color: inherit;
+    text-decoration: none;
+}
+
+button,
+input,
+select,
+textarea {
+    font: inherit;
+}
+
+button {
+    cursor: pointer;
+}
+
+section {
+    position: relative;
+    padding: 85px 6%;
+    scroll-margin-top: 85px;
+}
+
+section h2 {
+    color: var(--am-navy);
+    font-size: clamp(2rem, 4vw, 3rem);
+    line-height: 1.2;
+    font-weight: 850;
+    letter-spacing: -0.6px;
+}
+
+::selection {
+    color: var(--am-navy);
+    background: var(--am-gold);
+}
+
+/* ---------- 3. PREMIUM NAVBAR ---------- */
+
+body > header {
+    position: relative;
+    top: 0;
+    z-index: 1000;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 25px;
+
+    width: 100%;
+    padding: 16px 6%;
+
+    background: rgba(255, 255, 255, 0.97);
+    border-bottom: 1px solid rgba(11, 31, 58, 0.08);
+
+    box-shadow: 0 5px 22px rgba(11, 31, 58, 0.05);
+
+    transition:
+        background var(--am-transition),
+        box-shadow var(--am-transition);
+}
+
+body > header.scrolled {
+    background: rgba(255, 255, 255, 0.97);
+    box-shadow: 0 8px 28px rgba(11, 31, 58, 0.12);
+    backdrop-filter: blur(14px);
+}
+
+/* Logo */
+
+.logo {
+    flex-shrink: 0;
+    color: var(--am-navy);
+    font-size: 1.65rem;
+    font-weight: 900;
+    line-height: 1.15;
+    letter-spacing: -0.8px;
+}
+
+.logo span,
+.logo strong {
+    color: #d7a900;
+}
+
+/* Navigation links */
+
+.nav-links {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    flex-wrap: wrap;
+    gap: 8px 22px;
+
+    list-style: none;
+}
+
+.nav-links a {
+    position: relative;
+    display: inline-block;
+
+    padding: 7px 0;
+
+    color: var(--am-navy);
+    font-size: 0.91rem;
+    font-weight: 750;
+
+    transition: color var(--am-transition);
+}
+
+.nav-links a::after {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+
+    width: 100%;
+    height: 2px;
+
+    content: "";
+    background: var(--am-gold);
+
+    transform: scaleX(0);
+    transform-origin: left;
+
+    transition: transform var(--am-transition);
+}
+
+.nav-links a:hover,
+.nav-links a.active {
+    color: #a77d00;
+}
+
+.nav-links a:hover::after,
+.nav-links a.active::after {
+    transform: scaleX(1);
+}
+
+/* ---------- 4. HERO SECTION ---------- */
+
+#home {
+    position: relative;
+    isolation: isolate;
+
+    display: flex;
+    align-items: center;
+
+    min-height: 610px;
+    padding-top: 75px;
+    padding-bottom: 75px;
+
+    color: var(--am-white);
+
+    background:
+        radial-gradient(
+            circle at 82% 20%,
+            rgba(245, 197, 66, 0.17),
+            transparent 28%
+        ),
+        linear-gradient(
+            125deg,
+            #07172b 0%,
+            #0b1f3a 55%,
+            #16375c 100%
+        );
+}
+
+#home::before {
+    position: absolute;
+    inset: 0;
+    z-index: -1;
+
+    content: "";
+    opacity: 0.14;
+
+    background-image:
+        linear-gradient(
+            rgba(255, 255, 255, 0.06) 1px,
+            transparent 1px
+        ),
+        linear-gradient(
+            90deg,
+            rgba(255, 255, 255, 0.06) 1px,
+            transparent 1px
+        );
+
+    background-size: 42px 42px;
+
+    mask-image:
+        linear-gradient(to right, transparent, black);
+}
+
+/* Hero layout */
+
+.hero-content {
+    display: grid;
+    grid-template-columns:
+        minmax(0, 1.15fr)
+        minmax(280px, 0.85fr);
+
+    align-items: center;
+    gap: clamp(35px, 6vw, 80px);
+
+    width: 100%;
+    max-width: 1240px;
+    margin: 0 auto;
+}
+
+.hero-left {
+    max-width: 720px;
+}
+
+/* Small hero label */
+
+.hero-tag {
+    display: inline-flex;
+    align-items: center;
+    gap: 9px;
+
+    margin-bottom: 22px;
+    padding: 8px 14px;
+
+    color: var(--am-gold-light);
+    background: rgba(245, 197, 66, 0.10);
+
+    border: 1px solid rgba(245, 197, 66, 0.36);
+    border-radius: 999px;
+
+    font-size: 0.82rem;
+    font-weight: 800;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+}
+
+/* Main heading */
+
+.hero-left h1 {
+    margin-bottom: 13px;
+
+    color: var(--am-white);
+
+    font-size: clamp(3rem, 6.5vw, 5.7rem);
+    line-height: 1.03;
+    font-weight: 900;
+    letter-spacing: -2px;
+}
+
+/* Hero subheading */
+
+.hero-left h2 {
+    margin-bottom: 20px;
+
+    color: var(--am-gold);
+
+    font-size: clamp(1.5rem, 3.2vw, 2.45rem);
+    line-height: 1.22;
+    font-weight: 850;
+}
+
+/* Hero paragraph */
+
+.hero-left p {
+    max-width: 600px;
+    margin-bottom: 28px;
+
+    color: rgba(255, 255, 255, 0.79);
+    font-size: 1.05rem;
+}
+
+/* Hero buttons */
+
+.hero-buttons {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 14px;
+}
+
+.hero-buttons a {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+
+    min-height: 49px;
+    padding: 13px 22px;
+
+    border: 1px solid var(--am-gold);
+    border-radius: 10px;
+
+    font-weight: 800;
+
+    transition:
+        transform var(--am-transition),
+        background var(--am-transition),
+        color var(--am-transition),
+        box-shadow var(--am-transition);
+}
+
+/* Primary button */
+
+.hero-buttons a:first-child {
+    color: var(--am-navy);
+    background: var(--am-gold);
+
+    box-shadow:
+        0 8px 22px rgba(245, 197, 66, 0.20);
+}
+
+.hero-buttons a:first-child:hover {
+    background: var(--am-gold-light);
+    transform: translateY(-3px);
+
+    box-shadow:
+        0 12px 28px rgba(245, 197, 66, 0.30);
+}
+
+/* Secondary button */
+
+.hero-buttons a:last-child {
+    color: var(--am-white);
+    background: transparent;
+}
+
+.hero-buttons a:last-child:hover {
+    color: var(--am-navy);
+    background: var(--am-gold);
+    transform: translateY(-3px);
+}
+
+/* ---------- 5. HERO FEATURE CARD ---------- */
+
+.hero-right {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+}
+
+.hero-card {
+    position: relative;
+
+    width: min(100%, 430px);
+    padding: clamp(28px, 4vw, 44px);
+    overflow: hidden;
+
+    color: var(--am-white);
+
+    background:
+        linear-gradient(
+            145deg,
+            rgba(255, 255, 255, 0.13),
+            rgba(255, 255, 255, 0.045)
+        );
+
+    border: 1px solid rgba(255, 255, 255, 0.19);
+    border-radius: 26px;
+
+    box-shadow: 0 28px 70px rgba(0, 0, 0, 0.23);
+
+    backdrop-filter: blur(12px);
+
+    transition:
+        transform var(--am-transition),
+        border-color var(--am-transition);
+}
+
+.hero-card:hover {
+    transform: translateY(-7px);
+    border-color: rgba(245, 197, 66, 0.7);
+}
+
+/* Hero card icon */
+
+.hero-card .hero-icon,
+.hero-card .icon {
+    display: inline-grid;
+    place-items: center;
+
+    width: 64px;
+    height: 64px;
+    margin-bottom: 22px;
+
+    color: var(--am-navy);
+    background: var(--am-gold);
+
+    border-radius: 18px;
+    font-size: 2rem;
+}
+
+/* Hero card text */
+
+.hero-card h3 {
+    margin-bottom: 10px;
+
+    color: var(--am-white);
+    font-size: 1.55rem;
+    line-height: 1.3;
+}
+
+.hero-card p {
+    color: rgba(255, 255, 255, 0.76);
+}
+
+/* Divider inside hero card */
+
+.hero-line {
+    height: 1px;
+    margin: 25px 0;
+
+    background: rgba(255, 255, 255, 0.17);
+}
+
+/* Hero mini information */
+
+.hero-mini-info {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 12px 24px;
+}
+
+.hero-mini-info > div,
+.hero-mini-info span {
+    color: var(--am-gold-light);
+    font-size: 0.9rem;
+    font-weight: 800;
+}
+
+/* ---------- END OF PART 1 ---------- */
+
+/* =========================================================
+   A.M. CABLES — MASTER CSS
+   PART 2: BUSINESS STATS + SECTION HEADINGS + PRODUCTS
+   ========================================================= */
+
+/* ---------- 1. BUSINESS STATS ---------- */
+
+.business-stats {
+    padding: 0 6%;
+    background: var(--am-white);
+}
+
+.business-stats-inner {
+    display: grid;
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+
+    max-width: 1180px;
+    margin: 0 auto;
+    padding: 30px 0;
+
+    border-bottom: 1px solid var(--am-border);
+}
+
+.business-stats-inner > div {
+    padding: 8px 18px;
+    text-align: center;
+    border-right: 1px solid var(--am-border);
+}
+
+.business-stats-inner > div:last-child {
+    border-right: 0;
+}
+
+.business-stats strong,
+.business-stats h3 {
+    display: block;
+    color: var(--am-navy);
+    font-size: clamp(1.25rem, 2.6vw, 2rem);
+    line-height: 1.2;
+    font-weight: 900;
+}
+
+.business-stats span,
+.business-stats p {
+    display: block;
+    margin-top: 6px;
+    color: var(--am-muted);
+    font-size: 0.9rem;
+    font-weight: 600;
+}
+
+/* ---------- 2. SHARED SECTION HEADINGS ---------- */
+
+.products-header,
+.about-header,
+.why-header,
+.process-header,
+.contact-header {
+    max-width: 800px;
+    margin: 0 auto 38px;
+    text-align: center;
+}
+
+.products-header p,
+.about-header p,
+.why-header p,
+.process-intro,
+.contact-header p {
+    max-width: 720px;
+    margin: 14px auto 0;
+    color: var(--am-muted);
+    font-size: 1rem;
+}
+
+.products-header h2,
+.about-header h2,
+.why-header h2,
+.contact-header h2 {
+    position: relative;
+    display: inline-block;
+}
+
+.products-header h2::after,
+.about-header h2::after,
+.why-header h2::after,
+.contact-header h2::after {
+    display: block;
+    width: 68px;
+    height: 4px;
+    margin: 15px auto 0;
+
+    content: "";
+    background: linear-gradient(
+        90deg,
+        var(--am-gold),
+        #e5a900
+    );
+
+    border-radius: 99px;
+}
+
+/* ---------- 3. PRODUCTS SECTION ---------- */
+
+#products {
+    background: var(--am-light);
+}
+
+/* Trust information strip */
+
+.product-trust-strip {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 10px 24px;
+
+    max-width: 900px;
+    margin: 0 auto 28px;
+    padding: 14px 18px;
+
+    color: var(--am-navy);
+    background: var(--am-white);
+
+    border: 1px solid var(--am-border);
+    border-radius: 14px;
+
+    font-size: 0.9rem;
+    font-weight: 750;
+}
+
+/* Product search */
+
+.product-search-wrap,
+.product-search-box {
+    max-width: 520px;
+    margin: 0 auto 22px;
+}
+
+#productSearch {
+    display: block;
+    width: 100%;
+    min-height: 50px;
+    padding: 13px 17px;
+
+    color: var(--am-navy);
+    background: var(--am-white);
+
+    border: 1px solid #d8e0eb;
+    border-radius: 12px;
+    outline: none;
+
+    box-shadow: 0 4px 16px rgba(11, 31, 58, 0.04);
+
+    transition:
+        border-color var(--am-transition),
+        box-shadow var(--am-transition);
+}
+
+#productSearch:focus {
+    border-color: var(--am-gold);
+    box-shadow: 0 0 0 4px rgba(245, 197, 66, 0.18);
+}
+
+/* Product category filters */
+
+.product-filters {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 10px;
+
+    margin: 0 auto 34px;
+}
+
+.filter-btn {
+    padding: 9px 15px;
+
+    color: var(--am-navy);
+    background: var(--am-white);
+
+    border: 1px solid #dce3ed;
+    border-radius: 999px;
+
+    font-size: 0.88rem;
+    font-weight: 800;
+
+    transition:
+        color var(--am-transition),
+        background var(--am-transition),
+        border-color var(--am-transition),
+        transform var(--am-transition);
+}
+
+.filter-btn:hover,
+.filter-btn.active {
+    color: var(--am-navy);
+    background: var(--am-gold);
+    border-color: var(--am-gold);
+    transform: translateY(-2px);
+}
+
+/* Product cards layout: 3 columns on desktop */
+
+.product-container {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    align-items: stretch;
+    gap: 28px;
+
+    max-width: 1240px;
+    margin: 0 auto;
+}
+
+/* Individual product card */
+
+.product-card {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+
+    min-width: 0;
+    overflow: hidden;
+
+    background: var(--am-white);
+    border: 1px solid #e5eaf2;
+    border-radius: var(--am-radius);
+
+    box-shadow: 0 8px 26px rgba(11, 31, 58, 0.055);
+
+    opacity: 1;
+    transform: translateY(0);
+
+    transition:
+        transform var(--am-transition),
+        box-shadow var(--am-transition),
+        border-color var(--am-transition);
+}
+
+/* Gold top line */
+
+.product-card::before {
+    position: absolute;
+    top: 0;
+    right: 0;
+    left: 0;
+    z-index: 2;
+
+    height: 4px;
+    content: "";
+
+    background: linear-gradient(
+        90deg,
+        var(--am-navy),
+        var(--am-gold),
+        var(--am-navy)
+    );
+
+    transform: scaleX(0);
+    transform-origin: left;
+
+    transition: transform 0.45s ease;
+}
+
+.product-card:hover {
+    border-color: rgba(245, 197, 66, 0.75);
+    box-shadow: var(--am-shadow-hover);
+    transform: translateY(-8px);
+}
+
+.product-card:hover::before {
+    transform: scaleX(1);
+}
+
+/* Scroll reveal compatibility */
+
+.product-card.product-visible {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* Product image */
+
+.product-image,
+.product-gallery {
+    position: relative;
+    display: grid;
+    place-items: center;
+
+    width: 100%;
+    height: 245px;
+    overflow: hidden;
+
+    background: #f0f3f7;
+}
+
+.product-image img,
+.product-gallery img {
+    width: 100%;
+    height: 100%;
+    padding: 15px;
+
+    object-fit: contain;
+
+    transition: transform 0.55s ease;
+}
+
+.product-card:hover .product-image img,
+.product-card:hover .product-gallery img {
+    transform: scale(1.045);
+}
+
+/* Main product image shown in the card */
+
+.product-gallery {
+    grid-template-columns: 1fr;
+}
+
+.product-gallery img + img {
+    display: none;
+}
+
+/* Product badge */
+
+.product-badge {
+    position: absolute;
+    top: 15px;
+    left: 15px;
+    z-index: 3;
+
+    padding: 6px 11px;
+
+    color: var(--am-navy);
+    background: var(--am-gold);
+
+    border-radius: 999px;
+
+    font-size: 0.72rem;
+    font-weight: 900;
+    letter-spacing: 0.35px;
+    text-transform: uppercase;
+}
+
+/* Product information */
+
+.product-content {
+    display: flex;
+    flex: 1;
+    flex-direction: column;
+    align-items: flex-start;
+
+    padding: 23px;
+}
+
+.product-content h3 {
+    margin-bottom: 9px;
+
+    color: var(--am-navy);
+    font-size: 1.22rem;
+    line-height: 1.35;
+    font-weight: 850;
+}
+
+.product-content p {
+    margin-bottom: 18px;
+
+    color: var(--am-muted);
+    font-size: 0.94rem;
+}
+
+/* Product information tags */
+
+.product-meta {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+
+    width: 100%;
+    margin: auto 0 18px;
+}
+
+.product-meta span {
+    padding: 5px 9px;
+
+    color: #42516a;
+    background: #f0f3f8;
+
+    border-radius: 7px;
+
+    font-size: 0.75rem;
+    font-weight: 750;
+}
+
+/* Product buttons */
+
+.product-actions {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 10px;
+
+    width: 100%;
+}
+
+.view-details-btn,
+.quote-btn {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+
+    min-height: 43px;
+    padding: 10px 12px;
+
+    border: 1px solid var(--am-navy);
+    border-radius: 9px;
+
+    font-size: 0.84rem;
+    font-weight: 850;
+    text-align: center;
+
+    transition:
+        color var(--am-transition),
+        background var(--am-transition),
+        border-color var(--am-transition),
+        transform var(--am-transition);
+}
+
+/* View details */
+
+.view-details-btn {
+    color: var(--am-navy);
+    background: var(--am-white);
+}
+
+.view-details-btn:hover {
+    color: var(--am-white);
+    background: var(--am-navy);
+    transform: translateY(-2px);
+}
+
+/* Request a quote */
+
+.quote-btn {
+    color: var(--am-navy);
+    background: var(--am-gold);
+    border-color: var(--am-gold);
+}
+
+.quote-btn:hover {
+    background: var(--am-gold-light);
+    border-color: var(--am-gold-light);
+    transform: translateY(-2px);
+}
+
+/* No matching product message */
+
+.product-no-results {
+    display: none;
+
+    max-width: 700px;
+    margin: 30px auto 0;
+    padding: 24px;
+
+    color: var(--am-muted);
+    background: var(--am-white);
+
+    border: 1px dashed #c9d2df;
+    border-radius: 14px;
+
+    text-align: center;
+}
+
+.product-no-results.show {
+    display: block;
+}
+
+/* ---------- END OF PART 2 ---------- */
+
+/* =========================================================
+   A.M. CABLES — MASTER CSS
+   PART 3: ABOUT US + WHY CHOOSE US
+   ========================================================= */
+
+/* ---------- 1. ABOUT SECTION ---------- */
+
+#about {
+    position: relative;
+    overflow: hidden;
+    background: var(--am-white);
+}
+
+.about-content {
+    display: grid;
+    grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
+    align-items: center;
+    gap: 42px;
+
+    max-width: 1180px;
+    margin: 0 auto;
+}
+
+.about-main {
+    min-width: 0;
+}
+
+.about-main h3 {
+    margin-bottom: 16px;
+
+    color: var(--am-navy);
+    font-size: clamp(1.45rem, 2.5vw, 2rem);
+    line-height: 1.3;
+    font-weight: 900;
+}
+
+.about-main p {
+    margin-bottom: 16px;
+
+    color: var(--am-muted);
+    font-size: 0.98rem;
+    line-height: 1.9;
+}
+
+.about-highlights {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 16px;
+
+    min-width: 0;
+}
+
+.about-card {
+    position: relative;
+    overflow: hidden;
+
+    padding: 25px 22px;
+
+    background: linear-gradient(
+        145deg,
+        #ffffff 0%,
+        #f5f7fb 100%
+    );
+
+    border: 1px solid var(--am-border);
+    border-radius: 16px;
+
+    box-shadow: 0 7px 24px rgba(11, 31, 58, 0.05);
+
+    transition:
+        transform var(--am-transition),
+        box-shadow var(--am-transition),
+        border-color var(--am-transition);
+}
+
+.about-card::before {
+    position: absolute;
+    top: 0;
+    left: 0;
+
+    width: 4px;
+    height: 100%;
+
+    content: "";
+    background: var(--am-gold);
+
+    transform: scaleY(0);
+    transform-origin: bottom;
+
+    transition: transform 0.35s ease;
+}
+
+.about-card:hover {
+    transform: translateY(-6px);
+    border-color: rgba(245, 197, 66, 0.75);
+    box-shadow: var(--am-shadow-hover);
+}
+
+.about-card:hover::before {
+    transform: scaleY(1);
+}
+
+.about-card h3 {
+    margin-bottom: 10px;
+
+    color: var(--am-navy);
+    font-size: 1.08rem;
+    line-height: 1.4;
+    font-weight: 850;
+}
+
+.about-card p {
+    margin: 0;
+
+    color: var(--am-muted);
+    font-size: 0.9rem;
+    line-height: 1.8;
+}
+
+/* ---------- 2. WHY CHOOSE US SECTION ---------- */
+
+#why-us {
+    position: relative;
+    overflow: hidden;
+
+    background: linear-gradient(
+        180deg,
+        #f4f7fb 0%,
+        #ffffff 100%
+    );
+}
+
+.why-grid {
+    display: grid;
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+    align-items: stretch;
+    gap: 22px;
+
+    max-width: 1240px;
+    margin: 0 auto;
+}
+
+.why-box {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+
+    min-width: 0;
+    overflow: hidden;
+
+    padding: 28px 23px;
+
+    background: var(--am-white);
+    border: 1px solid var(--am-border);
+    border-radius: 17px;
+
+    box-shadow: 0 8px 24px rgba(11, 31, 58, 0.045);
+
+    transition:
+        transform var(--am-transition),
+        box-shadow var(--am-transition),
+        border-color var(--am-transition);
+}
+
+.why-box::after {
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    left: 0;
+
+    height: 4px;
+    content: "";
+
+    background: linear-gradient(
+        90deg,
+        var(--am-gold),
+        #e8ad18
+    );
+
+    transform: scaleX(0);
+    transform-origin: left;
+
+    transition: transform 0.4s ease;
+}
+
+.why-box:hover {
+    transform: translateY(-7px);
+    border-color: rgba(245, 197, 66, 0.7);
+    box-shadow: var(--am-shadow-hover);
+}
+
+.why-box:hover::after {
+    transform: scaleX(1);
+}
+
+/* Number / step label */
+
+.why-number {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+
+    width: 43px;
+    height: 43px;
+    margin-bottom: 20px;
+
+    color: var(--am-navy);
+    background: var(--am-gold);
+
+    border-radius: 12px;
+
+    font-size: 0.95rem;
+    font-weight: 950;
+}
+
+/* Icon */
+
+.why-icon {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    width: 54px;
+    height: 54px;
+    margin-bottom: 18px;
+
+    color: var(--am-navy);
+    background: #fff8df;
+
+    border: 1px solid #f5e7ad;
+    border-radius: 15px;
+
+    font-size: 1.65rem;
+
+    transition:
+        transform var(--am-transition),
+        background var(--am-transition);
+}
+
+.why-box:hover .why-icon {
+    background: var(--am-gold);
+    transform: rotate(-5deg) scale(1.05);
+}
+
+/* Text */
+
+.why-content {
+    width: 100%;
+}
+
+.why-content h3 {
+    margin-bottom: 11px;
+
+    color: var(--am-navy);
+    font-size: 1.12rem;
+    line-height: 1.4;
+    font-weight: 850;
+}
+
+.why-content p {
+    margin: 0;
+
+    color: var(--am-muted);
+    font-size: 0.92rem;
+    line-height: 1.8;
+}
+
+/* ---------- END OF PART 3 ---------- */
+
+/* =========================================================
+   A.M. CABLES — MASTER CSS
+   PART 4: MANUFACTURING PROCESS
+   ========================================================= */
+
+#process {
+    position: relative;
+    overflow: hidden;
+    background: var(--am-white);
+}
+
+/* Process heading */
+
+.process-header {
+    position: relative;
+    max-width: 850px;
+    margin: 0 auto 45px;
+    text-align: center;
+}
+
+.process-header > span:first-child {
+    display: inline-block;
+    margin-bottom: 13px;
+
+    color: #a77b00;
+    font-size: 0.78rem;
+    font-weight: 900;
+    letter-spacing: 2.5px;
+}
+
+/* IMPORTANT:
+   Only the real HTML heading text is displayed.
+   No generated duplicate heading or shine pseudo-text. */
+
+.process-title-text {
+    position: relative;
+    display: inline-block;
+
+    color: var(--am-navy);
+    font-size: clamp(1.8rem, 4vw, 2.8rem);
+    line-height: 1.2;
+    font-weight: 950;
+    letter-spacing: -0.8px;
+
+    background: linear-gradient(
+        110deg,
+        var(--am-navy) 0%,
+        var(--am-navy) 42%,
+        #b88909 50%,
+        var(--am-navy) 58%,
+        var(--am-navy) 100%
+    );
+
+    background-size: 220% 100%;
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+
+    animation: processTitleShine 7s ease-in-out infinite;
+}
+
+/* Shine applies to the real text only */
+
+@keyframes processTitleShine {
+    0% {
+        background-position: 100% 50%;
+    }
+
+    45% {
+        background-position: 0% 50%;
+    }
+
+    100% {
+        background-position: 0% 50%;
+    }
+}
+
+/* Prevent all pseudo-element duplicate heading text */
+
+.process-title-text::before,
+.process-title-text::after {
+    content: none !important;
+    display: none !important;
+}
+
+.process-header h2::before,
+.process-header h2::after {
+    content: none;
+}
+
+/* Intro paragraph */
+
+.process-intro {
+    max-width: 720px;
+    margin: 16px auto 0;
+
+    color: var(--am-muted);
+    font-size: 1rem;
+    line-height: 1.85;
+    text-align: center;
+}
+
+/* Process cards layout */
+
+.process-container {
+    display: grid;
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+    align-items: stretch;
+    gap: 22px;
+
+    max-width: 1240px;
+    margin: 0 auto;
+}
+
+/* Individual process card */
+
+.process-card {
+    position: relative;
+    min-width: 0;
+    overflow: hidden;
+
+    padding: 30px 23px;
+
+    background: linear-gradient(
+        150deg,
+        #ffffff 0%,
+        #f4f7fb 100%
+    );
+
+    border: 1px solid var(--am-border);
+    border-radius: 17px;
+
+    box-shadow: 0 8px 25px rgba(11, 31, 58, 0.05);
+
+    transition:
+        transform var(--am-transition),
+        box-shadow var(--am-transition),
+        border-color var(--am-transition);
+}
+
+/* Gold top accent */
+
+.process-card::before {
+    position: absolute;
+    top: 0;
+    right: 0;
+    left: 0;
+
+    height: 4px;
+    content: "";
+
+    background: linear-gradient(
+        90deg,
+        var(--am-navy),
+        var(--am-gold)
+    );
+
+    transform: scaleX(0);
+    transform-origin: left;
+
+    transition: transform 0.4s ease;
+}
+
+.process-card:hover {
+    transform: translateY(-7px);
+    border-color: rgba(245, 197, 66, 0.75);
+    box-shadow: var(--am-shadow-hover);
+}
+
+.process-card:hover::before {
+    transform: scaleX(1);
+}
+
+/* Step number */
+
+.process-card .process-number,
+.process-card .step-number,
+.process-card .number {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+
+    width: 48px;
+    height: 48px;
+    margin-bottom: 22px;
+
+    color: var(--am-navy);
+    background: var(--am-gold);
+
+    border-radius: 14px;
+
+    font-size: 1rem;
+    font-weight: 950;
+}
+
+/* Process card heading */
+
+.process-card h3 {
+    margin-bottom: 12px;
+
+    color: var(--am-navy);
+    font-size: 1.13rem;
+    line-height: 1.45;
+    font-weight: 850;
+}
+
+/* Process card description */
+
+.process-card p {
+    margin: 0;
+
+    color: var(--am-muted);
+    font-size: 0.92rem;
+    line-height: 1.85;
+}
+
+/* ---------- END OF PART 4 ---------- */
+
+/* =========================================================
+   A.M. CABLES — MASTER CSS
+   PART 5: CONTACT + INQUIRY FORM
+   ========================================================= */
+
+#contact {
+    position: relative;
+    overflow: hidden;
+    background: #f3f6fa;
+}
+
+/* Contact heading */
+
+.contact-header {
+    max-width: 800px;
+    margin: 0 auto 42px;
+    text-align: center;
+}
+
+.contact-header h2 {
+    color: var(--am-navy);
+    font-size: clamp(1.8rem, 4vw, 2.65rem);
+    font-weight: 950;
+    line-height: 1.2;
+}
+
+.contact-header p {
+    margin-top: 14px;
+    color: var(--am-muted);
+    line-height: 1.8;
+}
+
+/* Main contact layout */
+
+.contact-container {
+    display: grid;
+    grid-template-columns: minmax(0, 0.9fr) minmax(0, 1.1fr);
+    align-items: start;
+    gap: 30px;
+
+    max-width: 1180px;
+    margin: 0 auto;
+}
+
+/* Contact information column */
+
+.contact-info {
+    display: flex;
+    flex-direction: column;
+    gap: 17px;
+
+    min-width: 0;
+}
+
+/* Individual contact information boxes */
+
+.contact-info-box {
+    display: flex;
+    align-items: flex-start;
+    gap: 16px;
+
+    padding: 22px;
+
+    background: var(--am-white);
+    border: 1px solid var(--am-border);
+    border-radius: 15px;
+
+    box-shadow: 0 7px 22px rgba(11, 31, 58, 0.045);
+
+    transition:
+        transform var(--am-transition),
+        border-color var(--am-transition),
+        box-shadow var(--am-transition);
+}
+
+.contact-info-box:hover {
+    transform: translateY(-4px);
+    border-color: rgba(245, 197, 66, 0.8);
+    box-shadow: var(--am-shadow-hover);
+}
+
+/* Contact box icons */
+
+.contact-info-box .contact-icon,
+.contact-info-box .icon {
+    display: flex;
+    flex: 0 0 48px;
+    align-items: center;
+    justify-content: center;
+
+    width: 48px;
+    height: 48px;
+
+    color: var(--am-navy);
+    background: #fff6d7;
+
+    border: 1px solid #f3e3a5;
+    border-radius: 13px;
+
+    font-size: 1.35rem;
+}
+
+/* Contact text */
+
+.contact-info-box h3 {
+    margin: 0 0 6px;
+
+    color: var(--am-navy);
+    font-size: 1rem;
+    font-weight: 850;
+}
+
+.contact-info-box p,
+.contact-info-box a {
+    color: var(--am-muted);
+    font-size: 0.94rem;
+    line-height: 1.8;
+    overflow-wrap: anywhere;
+}
+
+.contact-info-box a {
+    font-weight: 750;
+    transition: color var(--am-transition);
+}
+
+.contact-info-box a:hover {
+    color: #a77b00;
+}
+
+/* Extra contact information box */
+
+.contact-extra-box {
+    padding: 23px;
+
+    color: var(--am-white);
+    background: linear-gradient(
+        135deg,
+        var(--am-navy),
+        #173b67
+    );
+
+    border: 1px solid rgba(245, 197, 66, 0.4);
+    border-radius: 15px;
+
+    box-shadow: 0 10px 28px rgba(11, 31, 58, 0.14);
+}
+
+.contact-extra-box h3 {
+    margin-bottom: 10px;
+    color: var(--am-gold);
+    font-size: 1.08rem;
+    font-weight: 850;
+}
+
+.contact-extra-box p {
+    color: rgba(255, 255, 255, 0.85);
+    font-size: 0.93rem;
+    line-height: 1.8;
+}
+
+/* Inquiry form panel */
+
+.quote-form {
+    min-width: 0;
+    padding: 32px;
+
+    background: var(--am-white);
+    border: 1px solid var(--am-border);
+    border-radius: 19px;
+
+    box-shadow: 0 12px 36px rgba(11, 31, 58, 0.07);
+}
+
+.quote-form h3 {
+    margin-bottom: 8px;
+
+    color: var(--am-navy);
+    font-size: 1.55rem;
+    font-weight: 900;
+}
+
+.quote-form > p {
+    margin-bottom: 24px;
+    color: var(--am-muted);
+    font-size: 0.93rem;
+    line-height: 1.8;
+}
+
+/* Form labels */
+
+.quote-form label {
+    display: block;
+    margin-bottom: 8px;
+
+    color: var(--am-navy);
+    font-size: 0.9rem;
+    font-weight: 800;
+}
+
+/* Inputs, dropdown and message field */
+
+.quote-form input,
+.quote-form select,
+.quote-form textarea,
+#customerName,
+#customerPhone,
+#product,
+#requirement {
+    display: block;
+    width: 100%;
+    min-width: 0;
+    min-height: 49px;
+    margin-bottom: 19px;
+    padding: 13px 15px;
+
+    color: var(--am-navy);
+    background: #fbfcfe;
+
+    border: 1px solid #d8e0eb;
+    border-radius: 10px;
+    outline: none;
+
+    font: inherit;
+    font-size: 0.94rem;
+
+    transition:
+        border-color var(--am-transition),
+        box-shadow var(--am-transition),
+        background var(--am-transition);
+}
+
+.quote-form textarea,
+#requirement {
+    min-height: 125px;
+    resize: vertical;
+}
+
+.quote-form input:focus,
+.quote-form select:focus,
+.quote-form textarea:focus,
+#customerName:focus,
+#customerPhone:focus,
+#product:focus,
+#requirement:focus {
+    background: var(--am-white);
+    border-color: var(--am-gold);
+    box-shadow: 0 0 0 4px rgba(245, 197, 66, 0.16);
+}
+
+/* WhatsApp inquiry submit button */
+
+.quote-form button[type="submit"],
+.quote-form input[type="submit"] {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    width: 100%;
+    min-height: 52px;
+    padding: 14px 18px;
+
+    color: var(--am-navy);
+    background: var(--am-gold);
+
+    border: 1px solid var(--am-gold);
+    border-radius: 11px;
+
+    font-size: 0.97rem;
+    font-weight: 900;
+    text-align: center;
+
+    cursor: pointer;
+
+    transition:
+        transform var(--am-transition),
+        background var(--am-transition),
+        box-shadow var(--am-transition);
+}
+
+.quote-form button[type="submit"]:hover,
+.quote-form input[type="submit"]:hover {
+    background: var(--am-gold-light);
+    box-shadow: 0 8px 20px rgba(245, 197, 66, 0.24);
+    transform: translateY(-2px);
+}
+
+.quote-form button[type="submit"]:active {
+    transform: translateY(0);
+}
+
+/* Small Urdu note */
+
+.quote-form small {
+    display: block;
+    margin-top: 15px;
+
+    color: var(--am-muted);
+    font-size: 0.84rem;
+    line-height: 1.8;
+    text-align: center;
+}
+
+/* Inquiry status message */
+
+#inquiryMessage {
+    margin-top: 15px;
+    color: var(--am-navy);
+    font-size: 0.9rem;
+    line-height: 1.7;
+}
+
+/* ---------- END OF PART 5 ---------- */
+
+/* =========================================================
+   A.M. CABLES — MASTER CSS
+   PART 6: FOOTER + FLOATING BUTTONS
+   ========================================================= */
+
+/* ---------- 1. FOOTER ---------- */
+
+footer {
+    position: relative;
+    overflow: hidden;
+
+    color: var(--am-white);
+    background: linear-gradient(
+        135deg,
+        #07172c 0%,
+        var(--am-navy) 55%,
+        #12345b 100%
+    );
+}
+
+.footer-content {
+    display: grid;
+    grid-template-columns: minmax(0, 1.4fr) minmax(0, 1fr);
+    gap: 40px;
+
+    max-width: 1180px;
+    margin: 0 auto;
+    padding: 55px 6% 40px;
+}
+
+.footer-content h3 {
+    margin-bottom: 16px;
+
+    color: var(--am-gold);
+    font-size: 1.15rem;
+    font-weight: 900;
+}
+
+.footer-content p {
+    max-width: 520px;
+    color: rgba(255, 255, 255, 0.76);
+    font-size: 0.93rem;
+    line-height: 1.9;
+}
+
+.footer-content a {
+    color: rgba(255, 255, 255, 0.83);
+
+    transition:
+        color var(--am-transition),
+        padding-left var(--am-transition);
+}
+
+.footer-content a:hover {
+    color: var(--am-gold);
+}
+
+.footer-bottom {
+    padding: 20px 6%;
+
+    border-top: 1px solid rgba(255, 255, 255, 0.13);
+
+    color: rgba(255, 255, 255, 0.68);
+    font-size: 0.85rem;
+    line-height: 1.8;
+    text-align: center;
+}
+
+.footer-bottom p {
+    margin: 0;
+}
+
+/* ---------- 2. FLOATING WHATSAPP BUTTON ---------- */
+
+.whatsapp-float {
+    position: fixed;
+    right: 24px;
+    bottom: 24px;
+    z-index: 999;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 9px;
+
+    min-height: 54px;
+    padding: 13px 19px;
+
+    color: #ffffff;
+    background: #20bd5a;
+
+    border: 2px solid rgba(255, 255, 255, 0.85);
+    border-radius: 999px;
+
+    box-shadow: 0 8px 25px rgba(32, 189, 90, 0.28);
+
+    font-size: 0.92rem;
+    font-weight: 900;
+    text-decoration: none;
+
+    transition:
+        transform var(--am-transition),
+        background var(--am-transition),
+        box-shadow var(--am-transition);
+}
+
+.whatsapp-float:hover {
+    color: #ffffff;
+    background: #169b47;
+
+    box-shadow: 0 11px 30px rgba(32, 189, 90, 0.36);
+    transform: translateY(-4px);
+}
+
+.whatsapp-float:focus-visible {
+    outline: 3px solid var(--am-gold);
+    outline-offset: 4px;
+}
+
+/* ---------- 3. BACK TO TOP BUTTON ---------- */
+
+#backToTop {
+    position: fixed;
+    right: 28px;
+    bottom: 94px;
+    z-index: 998;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    width: 45px;
+    height: 45px;
+    padding: 0;
+
+    color: var(--am-navy);
+    background: var(--am-gold);
+
+    border: 0;
+    border-radius: 13px;
+
+    box-shadow: 0 6px 20px rgba(11, 31, 58, 0.17);
+
+    font-size: 1.25rem;
+    font-weight: 900;
+
+    cursor: pointer;
+
+    opacity: 0;
+    visibility: hidden;
+    pointer-events: none;
+
+    transform: translateY(10px);
+
+    transition:
+        opacity var(--am-transition),
+        visibility var(--am-transition),
+        transform var(--am-transition),
+        background var(--am-transition);
+}
+
+#backToTop.show,
+#backToTop.visible,
+#backToTop.active {
+    opacity: 1;
+    visibility: visible;
+    pointer-events: auto;
+    transform: translateY(0);
+}
+
+#backToTop:hover {
+    background: var(--am-gold-light);
+    transform: translateY(-3px);
+}
+
+#backToTop:focus-visible {
+    outline: 3px solid var(--am-navy);
+    outline-offset: 4px;
+}
+
+/* ---------- END OF PART 6 ---------- */
+
+/* =========================================================
+   A.M. CABLES — MASTER CSS
+   PART 7: PRODUCT MODAL + RESPONSIVE DESIGN
+   ========================================================= */
+
+/* ---------- 1. PRODUCT DETAILS MODAL ---------- */
+
+.product-modal {
+    position: fixed;
+    inset: 0;
+    z-index: 2000;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    padding: 24px;
+
+    background: rgba(4, 15, 31, 0.76);
+    backdrop-filter: blur(7px);
+    -webkit-backdrop-filter: blur(7px);
+
+    opacity: 0;
+    visibility: hidden;
+    pointer-events: none;
+
+    transition:
+        opacity 0.3s ease,
+        visibility 0.3s ease;
+}
+
+.product-modal.show {
+    opacity: 1;
+    visibility: visible;
+    pointer-events: auto;
+}
+
+.product-modal-box {
+    position: relative;
+
+    width: 100%;
+    max-width: 850px;
+    max-height: min(88vh, 800px);
+    overflow-y: auto;
+
+    padding: 32px;
+
+    background: var(--am-white);
+    border: 1px solid rgba(245, 197, 66, 0.55);
+    border-radius: 22px;
+
+    box-shadow: 0 25px 80px rgba(0, 0, 0, 0.3);
+
+    transform: translateY(18px) scale(0.98);
+    transition: transform 0.3s ease;
+}
+
+.product-modal.show .product-modal-box {
+    transform: translateY(0) scale(1);
+}
+
+/* Close button */
+
+.modal-close {
+    position: absolute;
+    top: 14px;
+    right: 14px;
+    z-index: 5;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    width: 42px;
+    height: 42px;
+
+    color: var(--am-navy);
+    background: #f0f3f8;
+
+    border: 1px solid var(--am-border);
+    border-radius: 50%;
+
+    font-size: 1.5rem;
+    line-height: 1;
+
+    cursor: pointer;
+
+    transition:
+        color var(--am-transition),
+        background var(--am-transition),
+        transform var(--am-transition);
+}
+
+.modal-close:hover {
+    color: var(--am-navy);
+    background: var(--am-gold);
+    transform: rotate(90deg);
+}
+
+/* Modal gallery */
+
+.modal-product-gallery {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 14px;
+
+    margin-bottom: 25px;
+}
+
+.modal-product-gallery.two-photos {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+}
+
+.modal-product-gallery img {
+    display: block;
+
+    width: 100%;
+    height: 280px;
+    padding: 14px;
+
+    object-fit: contain;
+
+    background: #f2f5f9;
+    border: 1px solid var(--am-border);
+    border-radius: 14px;
+}
+
+/* Modal text */
+
+.modal-content {
+    padding-top: 4px;
+}
+
+.modal-label {
+    display: inline-block;
+    margin-bottom: 10px;
+    padding: 6px 11px;
+
+    color: var(--am-navy);
+    background: #fff4ce;
+
+    border-radius: 999px;
+
+    font-size: 0.76rem;
+    font-weight: 900;
+    letter-spacing: 0.6px;
+    text-transform: uppercase;
+}
+
+#modalProductName {
+    margin-bottom: 12px;
+
+    color: var(--am-navy);
+    font-size: clamp(1.5rem, 3vw, 2.1rem);
+    line-height: 1.3;
+    font-weight: 950;
+}
+
+#modalProductDescription {
+    color: var(--am-muted);
+    font-size: 0.97rem;
+    line-height: 1.9;
+}
+
+.modal-quote-btn {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+
+    min-height: 48px;
+    margin-top: 22px;
+    padding: 13px 22px;
+
+    color: var(--am-navy);
+    background: var(--am-gold);
+
+    border: 1px solid var(--am-gold);
+    border-radius: 10px;
+
+    font-weight: 900;
+    text-align: center;
+
+    cursor: pointer;
+
+    transition:
+        background var(--am-transition),
+        transform var(--am-transition);
+}
+
+.modal-quote-btn:hover {
+    background: var(--am-gold-light);
+    transform: translateY(-2px);
+}
+
+/* ---------- 2. TABLET RESPONSIVE ---------- */
+
+@media (max-width: 1024px) {
+    .product-container {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        gap: 22px;
+    }
+
+    .why-grid,
+    .process-container {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+
+    .about-content {
+        gap: 28px;
+    }
+
+    .contact-container {
+        gap: 22px;
+    }
+
+    .product-image,
+    .product-gallery {
+        height: 230px;
+    }
+}
+
+/* ---------- 3. MOBILE RESPONSIVE ---------- */
+
+@media (max-width: 600px) {
+    /* General spacing */
+
+    section {
+        padding: 58px 5%;
+    }
+
+    .products-header,
+    .about-header,
+    .why-header,
+    .process-header,
+    .contact-header {
+        margin-bottom: 28px;
+    }
+
+    .products-header p,
+    .about-header p,
+    .why-header p,
+    .process-intro,
+    .contact-header p {
+        font-size: 0.92rem;
+    }
+
+    /* Business stats */
+
+    .business-stats {
+        padding: 0 5%;
+    }
+
+    .business-stats-inner {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        padding: 18px 0;
+    }
+
+    .business-stats-inner > div {
+        padding: 16px 8px;
+        border-right: 0;
+    }
+
+    .business-stats-inner > div:nth-child(odd) {
+        border-right: 1px solid var(--am-border);
+    }
+
+    .business-stats-inner > div:nth-child(-n+2) {
+        border-bottom: 1px solid var(--am-border);
+    }
+
+    /* Products */
+
+    .product-container {
+        grid-template-columns: minmax(0, 1fr);
+        gap: 22px;
+    }
+
+    .product-image,
+    .product-gallery {
+        height: 245px;
+    }
+
+    .product-content {
+        padding: 20px;
+    }
+
+    .product-filters {
+        gap: 8px;
+        margin-bottom: 25px;
+    }
+
+    .filter-btn {
+        padding: 8px 12px;
+        font-size: 0.8rem;
+    }
+
+    .product-trust-strip {
+        gap: 9px 14px;
+        padding: 14px;
+        font-size: 0.82rem;
+    }
+
+    /* About */
+
+    .about-content {
+        grid-template-columns: minmax(0, 1fr);
+        gap: 24px;
+    }
+
+    .about-highlights {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        gap: 12px;
+    }
+
+    .about-card {
+        padding: 19px 15px;
+    }
+
+    .about-card h3 {
+        font-size: 0.98rem;
+    }
+
+    .about-card p {
+        font-size: 0.85rem;
+    }
+
+    /* Why choose us */
+
+    .why-grid {
+        grid-template-columns: minmax(0, 1fr);
+        gap: 16px;
+    }
+
+    .why-box {
+        padding: 23px 20px;
+    }
+
+    /* Manufacturing process */
+
+    .process-container {
+        grid-template-columns: minmax(0, 1fr);
+        gap: 16px;
+    }
+
+    .process-card {
+        padding: 24px 20px;
+    }
+
+    .process-title-text {
+        letter-spacing: -0.4px;
+    }
+
+    /* Contact */
+
+    .contact-container {
+        grid-template-columns: minmax(0, 1fr);
+        gap: 22px;
+    }
+
+    .contact-info-box {
+        padding: 18px;
+    }
+
+    .quote-form {
+        padding: 23px 18px;
+        border-radius: 16px;
+    }
+
+    .quote-form h3 {
+        font-size: 1.35rem;
+    }
+
+    /* Footer */
+
+    .footer-content {
+        grid-template-columns: minmax(0, 1fr);
+        gap: 25px;
+        padding: 42px 5% 30px;
+    }
+
+    .footer-bottom {
+        padding: 18px 5%;
+    }
+
+    /* Floating buttons */
+
+    .whatsapp-float {
+        right: 14px;
+        bottom: 15px;
+
+        min-height: 48px;
+        padding: 11px 15px;
+
+        font-size: 0.84rem;
+    }
+
+    #backToTop {
+        right: 17px;
+        bottom: 76px;
+
+        width: 41px;
+        height: 41px;
+    }
+
+    /* Product modal */
+
+    .product-modal {
+        padding: 12px;
+    }
+
+    .product-modal-box {
+        max-height: 92vh;
+        padding: 22px 17px;
+        border-radius: 17px;
+    }
+
+    .modal-product-gallery.two-photos {
+        grid-template-columns: minmax(0, 1fr);
+    }
+
+    .modal-product-gallery img {
+        height: 220px;
+    }
+
+    .modal-close {
+        top: 9px;
+        right: 9px;
+        width: 38px;
+        height: 38px;
+    }
+}
+
+/* ---------- 4. SMALL MOBILE ---------- */
+
+@media (max-width: 380px) {
+    .about-highlights {
+        grid-template-columns: minmax(0, 1fr);
+    }
+
+    .product-actions {
+        grid-template-columns: minmax(0, 1fr);
+    }
+
+    .product-image,
+    .product-gallery {
+        height: 215px;
+    }
+
+    .whatsapp-float {
+        right: 10px;
+        bottom: 12px;
+    }
+}
+
+/* ---------- 5. REDUCED MOTION ACCESSIBILITY ---------- */
+
+@media (prefers-reduced-motion: reduce) {
+    .process-title-text {
+        animation: none;
+        background-position: 50% 50%;
+    }
+
+    .product-card,
+    .about-card,
+    .why-box,
+    .process-card,
+    .product-modal,
+    .product-modal-box {
+        transition: none;
+    }
+}
+
+/* ---------- END OF PART 7 ---------- */
+
+/* =========================================================
+   A.M. CABLES — MASTER CSS
+   PART 8: FINAL POLISH + NAVBAR + ACCESSIBILITY
+   ========================================================= */
+
+/* ---------- 1. GLOBAL SAFETY ---------- */
+
+html {
+    scroll-behavior: smooth;
+    scroll-padding-top: 90px;
+}
+
+body {
+    margin: 0;
+    min-width: 320px;
+    overflow-x: hidden;
+    color: var(--am-text);
+    background: var(--am-white);
+    font-family: "Segoe UI", Arial, sans-serif;
+    line-height: 1.7;
+}
+
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+}
+
+img {
+    max-width: 100%;
+}
+
+button,
+input,
+select,
+textarea {
+    font: inherit;
+}
+
+button,
+a {
+    -webkit-tap-highlight-color: transparent;
+}
+
+a {
+    text-decoration: none;
+}
+
+button {
+    cursor: pointer;
+}
+
+section {
+    padding: 80px 6%;
+    scroll-margin-top: 85px;
+}
+
+h1,
+h2,
+h3,
+h4,
+p {
+    overflow-wrap: anywhere;
+}
+
+:focus-visible {
+    outline: 3px solid var(--am-gold);
+    outline-offset: 4px;
+}
+
+/* ---------- 2. NAVBAR FINAL POLISH ---------- */
+
+body > header {
+    position: relative;
+    top: 0;
+    z-index: 1000;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 24px;
+
+    width: 100%;
+    padding: 17px 6%;
+
+    background: rgba(255, 255, 255, 0.97);
+    border-bottom: 1px solid rgba(11, 31, 58, 0.08);
+
+    box-shadow: 0 4px 18px rgba(11, 31, 58, 0.04);
+
+    transition:
+        padding 0.3s ease,
+        background 0.3s ease,
+        box-shadow 0.3s ease;
+}
+
+body > header.scrolled {
+    padding-top: 12px;
+    padding-bottom: 12px;
+
+    background: rgba(255, 255, 255, 0.94);
+
+    box-shadow: 0 8px 28px rgba(11, 31, 58, 0.09);
+
+    backdrop-filter: blur(14px);
+    -webkit-backdrop-filter: blur(14px);
+}
+
+.logo {
+    flex-shrink: 0;
+
+    color: var(--am-navy);
+    font-size: 1.55rem;
+    line-height: 1.2;
+    font-weight: 950;
+    letter-spacing: -0.5px;
+}
+
+.logo span {
+    color: #b88909;
+}
+
+.nav-links {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    flex-wrap: wrap;
+    gap: 8px 20px;
+
+    margin: 0;
+    padding: 0;
+
+    list-style: none;
+}
+
+.nav-links a {
+    position: relative;
+    display: inline-block;
+
+    padding: 8px 0;
+
+    color: var(--am-navy);
+    font-size: 0.88rem;
+    font-weight: 750;
+
+    transition: color 0.25s ease;
+}
+
+.nav-links a::after {
+    position: absolute;
+    right: 0;
+    bottom: 2px;
+    left: 0;
+
+    height: 2px;
+
+    content: "";
+    background: var(--am-gold);
+
+    transform: scaleX(0);
+    transform-origin: left;
+
+    transition: transform 0.25s ease;
+}
+
+.nav-links a:hover,
+.nav-links a.active {
+    color: #9a7000;
+}
+
+.nav-links a:hover::after,
+.nav-links a.active::after {
+    transform: scaleX(1);
+}
+
+/* ---------- 3. HERO FINAL POLISH ---------- */
+
+#home {
+    position: relative;
+    overflow: hidden;
+    isolation: isolate;
+
+    background: linear-gradient(
+        125deg,
+        #07172c 0%,
+        var(--am-navy) 58%,
+        #173a63 100%
+    );
+}
+
+#home::before {
+    position: absolute;
+    top: -130px;
+    right: -100px;
+    z-index: -1;
+
+    width: 340px;
+    height: 340px;
+
+    content: "";
+    background: rgba(245, 197, 66, 0.08);
+    border: 1px solid rgba(245, 197, 66, 0.15);
+    border-radius: 50%;
+
+    pointer-events: none;
+}
+
+.hero-content {
+    position: relative;
+    z-index: 1;
+
+    display: grid;
+    grid-template-columns: minmax(0, 1.2fr) minmax(0, 0.8fr);
+    align-items: center;
+    gap: 50px;
+
+    max-width: 1240px;
+    margin: 0 auto;
+}
+
+.hero-left,
+.hero-right {
+    min-width: 0;
+}
+
+.hero-tag {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+
+    margin-bottom: 18px;
+    padding: 8px 13px;
+
+    color: var(--am-gold);
+    background: rgba(245, 197, 66, 0.1);
+
+    border: 1px solid rgba(245, 197, 66, 0.3);
+    border-radius: 999px;
+
+    font-size: 0.82rem;
+    font-weight: 800;
+}
+
+.hero-left h1 {
+    margin: 0 0 14px;
+
+    color: var(--am-white);
+    font-size: clamp(2.6rem, 5.5vw, 4.5rem);
+    line-height: 1.08;
+    font-weight: 950;
+    letter-spacing: -1.5px;
+}
+
+.hero-left h2 {
+    margin: 0 0 18px;
+
+    color: var(--am-gold);
+    font-size: clamp(1.35rem, 2.7vw, 2rem);
+    line-height: 1.35;
+    font-weight: 850;
+}
+
+.hero-left p {
+    max-width: 600px;
+    margin: 0 0 25px;
+
+    color: rgba(255, 255, 255, 0.8);
+    font-size: 1rem;
+    line-height: 1.9;
+}
+
+.hero-buttons {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 13px;
+}
+
+.hero-buttons a {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+
+    min-height: 48px;
+    padding: 12px 20px;
+
+    border: 1px solid var(--am-gold);
+    border-radius: 10px;
+
+    font-weight: 850;
+
+    transition:
+        transform 0.25s ease,
+        background 0.25s ease,
+        color 0.25s ease;
+}
+
+.hero-buttons a:first-child {
+    color: var(--am-navy);
+    background: var(--am-gold);
+}
+
+.hero-buttons a:last-child {
+    color: var(--am-white);
+    background: transparent;
+}
+
+.hero-buttons a:hover {
+    transform: translateY(-3px);
+}
+
+.hero-buttons a:first-child:hover {
+    background: var(--am-gold-light);
+}
+
+.hero-buttons a:last-child:hover {
+    color: var(--am-navy);
+    background: var(--am-gold);
+}
+
+/* Hero feature card */
+
+.hero-card {
+    padding: 30px;
+
+    color: var(--am-white);
+    background: rgba(255, 255, 255, 0.07);
+
+    border: 1px solid rgba(255, 255, 255, 0.16);
+    border-radius: 22px;
+
+    box-shadow: 0 20px 55px rgba(0, 0, 0, 0.15);
+
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+
+    transition:
+        transform 0.3s ease,
+        border-color 0.3s ease;
+}
+
+.hero-card:hover {
+    transform: translateY(-5px);
+    border-color: rgba(245, 197, 66, 0.55);
+}
+
+.hero-icon,
+.hero-icon .icon {
+    color: var(--am-gold);
+    font-size: 2.5rem;
+}
+
+.hero-card h3,
+.hero-card h2 {
+    margin: 15px 0 10px;
+    color: var(--am-white);
+    font-weight: 900;
+}
+
+.hero-card p {
+    color: rgba(255, 255, 255, 0.76);
+    line-height: 1.8;
+}
+
+.hero-line {
+    width: 100%;
+    height: 1px;
+    margin: 22px 0;
+
+    background: rgba(255, 255, 255, 0.16);
+}
+
+.hero-mini-info {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    gap: 16px;
+}
+
+.hero-mini-info > div {
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+}
+
+.hero-mini-info strong {
+    color: var(--am-gold);
+    font-size: 1.1rem;
+}
+
+.hero-mini-info span {
+    color: rgba(255, 255, 255, 0.75);
+    font-size: 0.85rem;
+}
+
+/* ---------- 4. BUTTON & LINK POLISH ---------- */
+
+button:disabled {
+    opacity: 0.6;
+    cursor: not-allowed;
+    transform: none;
+}
+
+::selection {
+    color: var(--am-navy);
+    background: var(--am-gold);
+}
+
+/* ---------- 5. NAVBAR + HERO MOBILE ---------- */
+
+@media (max-width: 900px) {
+    .hero-content {
+        grid-template-columns: minmax(0, 1fr);
+        gap: 35px;
+    }
+
+    .hero-right {
+        max-width: 600px;
+        width: 100%;
+    }
+
+    body > header {
+        gap: 16px;
+    }
+
+    .nav-links {
+        gap: 7px 13px;
+    }
+}
+
+@media (max-width: 600px) {
+    body > header {
+        position: relative;
+
+        flex-direction: column;
+        align-items: center;
+        gap: 12px;
+
+        padding: 16px 5%;
+    }
+
+    body > header.scrolled {
+        padding: 14px 5%;
+    }
+
+    .logo {
+        font-size: 1.45rem;
+    }
+
+    .nav-links {
+        display: grid;
+        grid-template-columns: repeat(3, minmax(0, 1fr));
+        justify-content: center;
+        gap: 5px 12px;
+
+        width: 100%;
+    }
+
+    .nav-links a {
+        display: block;
+        padding: 7px 2px;
+
+        font-size: 0.78rem;
+        line-height: 1.4;
+        text-align: center;
+    }
+
+    .hero-content {
+        gap: 28px;
+    }
+
+    .hero-left h1 {
+        font-size: clamp(2.25rem, 10vw, 3.3rem);
+        letter-spacing: -0.8px;
+    }
+
+    .hero-left h2 {
+        font-size: 1.35rem;
+    }
+
+    .hero-left p {
+        font-size: 0.94rem;
+    }
+
+    .hero-card {
+        padding: 23px 20px;
+    }
+
+    .hero-buttons {
+        flex-direction: column;
+        align-items: stretch;
+    }
+
+    .hero-buttons a {
+        width: 100%;
+    }
+}
+
+/* ---------- 6. FINAL END ---------- */
+
+/* MOBILE NAVBAR — SCROLL WITH PAGE */
+@media (max-width: 600px) {
+    body > header {
+        position: static !important;
+        top: auto !important;
+    }
+}
+
+
+/* A.M. Cables Light Mode */
+body.am-light-mode {
+  background: #f4f7fb !important;
+  color: #172338 !important;
+}
+
+body.am-light-mode section,
+body.am-light-mode .about-section,
+body.am-light-mode .products-section,
+body.am-light-mode .process-section,
+body.am-light-mode .contact-section {
+  background-color: #f4f7fb !important;
+  color: #172338 !important;
+}
+
+body.am-light-mode .product-card,
+body.am-light-mode .about-card,
+body.am-light-mode .why-card,
+body.am-light-mode .process-card,
+body.am-light-mode .contact-card,
+body.am-light-mode .contact-form {
+  background: #ffffff !important;
+  color: #172338 !important;
+}
+
+body.am-light-mode p,
+body.am-light-mode h1,
+body.am-light-mode h2,
+body.am-light-mode h3,
+body.am-light-mode label {
+  color: inherit;
+}
+
+/* LIGHT MODE — extra readability */
+body.am-light-mode .navbar,
+body.am-light-mode header {
+    background: #ffffff !important;
+    color: #172338 !important;
+}
+
+body.am-light-mode .navbar a,
+body.am-light-mode header a {
+    color: #172338 !important;
+}
+
+body.am-light-mode input,
+body.am-light-mode textarea,
+body.am-light-mode select {
+    background: #ffffff !important;
+    color: #172338 !important;
+    border-color: #cbd5e1 !important;
+}
+
+
+/* A.M. Cables — Light Mode */
+body.am-light-mode {
+    background: #f4f7fb !important;
+    color: #172338 !important;
+}
+
+body.am-light-mode section,
+body.am-light-mode .products-section,
+body.am-light-mode .about-section,
+body.am-light-mode .process-section,
+body.am-light-mode .contact-section {
+    background: #f4f7fb !important;
+    color: #172338 !important;
+}
+
+body.am-light-mode .product-card,
+body.am-light-mode .why-card,
+body.am-light-mode .process-card,
+body.am-light-mode .contact-form {
+    background: #ffffff !important;
+    color: #172338 !important;
+    border-color: #dbe3ef !important;
+}
+
+body.am-light-mode h1,
+body.am-light-mode h2,
+body.am-light-mode h3,
+body.am-light-mode p,
+body.am-light-mode label {
+    color: #172338;
+}
+/* FIX: A.M. Cables Light Theme */
+body.am-light-mode {
+    background: #f4f7fb !important;
+    color: #172338 !important;
+}
+
+body.am-light-mode header,
+body.am-light-mode nav,
+body.am-light-mode main,
+body.am-light-mode section,
+body.am-light-mode footer {
+    background-color: #f4f7fb !important;
+    color: #172338 !important;
+}
+
+body.am-light-mode .product-card,
+body.am-light-mode .why-card,
+body.am-light-mode .process-card,
+body.am-light-mode .about-card,
+body.am-light-mode .contact-form,
+body.am-light-mode .contact-info-card {
+    background: #ffffff !important;
+    color: #172338 !important;
+    border-color: #dbe3ef !important;
+}
+
+body.am-light-mode h1,
+body.am-light-mode h2,
+body.am-light-mode h3,
+body.am-light-mode p,
+body.am-light-mode li,
+body.am-light-mode label,
+body.am-light-mode .section-title {
+    color: #172338 !important;
+}
+
+body.am-light-mode input,
+body.am-light-mode textarea,
+body.am-light-mode select {
+    background: #ffffff !important;
+    color: #172338 !important;
+    border: 1px solid #cbd5e1 !important;
+}
+
+body.am-light-mode .theme-toggle {
+    background: #f5c542 !important;
+    color: #172338 !important;
+}
